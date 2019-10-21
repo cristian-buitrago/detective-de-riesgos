@@ -127,21 +127,56 @@ class Game extends Phaser.Scene{
         this.Recurso29 = this.add.image(4702,2354,'Recurso29').setOrigin(0,0);
         this.Recurso30 = this.add.image(991,1737,'Recurso30').setOrigin(0,0);
         this.Recurso31 = this.add.image(3077,662,'Recurso31').setOrigin(0,0);
-        this.Recurso32 = this.add.image(989,1550,'Recurso32').setOrigin(0,0);
-        this.Recurso33 = this.add.image(2419,2115,'Recurso33').setOrigin(0,0);
-        this.Recurso34 = this.add.image(2883,2738,'Recurso34').setOrigin(0,0);
-        this.Recurso35 = this.add.image(3013,1403,'Recurso35').setOrigin(0,0);
-        this.Recurso36 = this.add.image(3320,1303,'Recurso36').setOrigin(0,0);
-        this.Recurso37 = this.add.image(3739,1880,'Recurso37').setOrigin(0,0);
-        this.Recurso38 = this.add.image(3950,2199,'Recurso38').setOrigin(0,0);
-        this.Recurso39 = this.add.image(2979,1977,'Recurso39').setOrigin(0,0);
-        this.Recurso40 = this.add.image(4513,2218,'Recurso40').setOrigin(0,0);
-        this.Recurso41 = this.add.image(6253,1956,'Recurso41').setOrigin(0,0);
-        this.Recurso42 = this.add.image(4793,1742,'Recurso42').setOrigin(0,0);
-        this.Recurso43 = this.add.image(5255,1722,'Recurso43').setOrigin(0,0);
-        this.Recurso44 = this.add.image(4941,1311,'Recurso44').setOrigin(0,0);
-        this.Recurso45 = this.add.image(4680,1158,'Recurso45').setOrigin(0,0);
-        this.Recurso46 = this.add.image(3843,1104,'Recurso46').setOrigin(0,0);
+
+        this.Recurso31.setInteractive();
+        this.Recurso31.on('pointerup', () => { this. showPregunta(0);});
+
+        this.Recurso32 = this.add.image(989,1550,'Recurso31').setOrigin(0,0);
+        this.Recurso32.setInteractive();
+        this.Recurso32.on('pointerup', () => { this. showPregunta(1);});
+        this.Recurso33 = this.add.image(2419,2115,'Recurso31').setOrigin(0,0);
+        this.Recurso33.setInteractive();
+        this.Recurso33.on('pointerup', () => { this. showPregunta(2);});
+        this.Recurso34 = this.add.image(2883,2738,'Recurso31').setOrigin(0,0);
+        this.Recurso34.setInteractive();
+        this.Recurso34.on('pointerup', () => { this. showPregunta(3);});
+        this.Recurso35 = this.add.image(3013,1403,'Recurso31').setOrigin(0,0);
+        this.Recurso35.setInteractive();
+        this.Recurso35.on('pointerup', () => { this. showPregunta(4);});
+        this.Recurso36 = this.add.image(3320,1303,'Recurso31').setOrigin(0,0);
+        this.Recurso36.setInteractive();
+        this.Recurso36.on('pointerup', () => { this. showPregunta(5);});
+        this.Recurso37 = this.add.image(3739,1880,'Recurso31').setOrigin(0,0);
+        this.Recurso37.setInteractive();
+        this.Recurso37.on('pointerup', () => { this. showPregunta(6);});
+        this.Recurso38 = this.add.image(3950,2199,'Recurso31').setOrigin(0,0);
+        this.Recurso38.setInteractive();
+        this.Recurso38.on('pointerup', () => { this. showPregunta(7);});
+        this.Recurso39 = this.add.image(2979,1977,'Recurso31').setOrigin(0,0);
+        this.Recurso39.setInteractive();
+        this.Recurso39.on('pointerup', () => { this. showPregunta(8);});
+        this.Recurso40 = this.add.image(4513,2218,'Recurso31').setOrigin(0,0);
+        this.Recurso40.setInteractive();
+        this.Recurso40.on('pointerup', () => { this. showPregunta(9);});
+        this.Recurso41 = this.add.image(6253,1956,'Recurso31').setOrigin(0,0);
+        this.Recurso41.setInteractive();
+        this.Recurso41.on('pointerup', () => { this. showPregunta(10);});
+        this.Recurso42 = this.add.image(4793,1742,'Recurso31').setOrigin(0,0);
+        this.Recurso42.setInteractive();
+        this.Recurso42.on('pointerup', () => { this. showPregunta(11);});
+        this.Recurso43 = this.add.image(5255,1722,'Recurso31').setOrigin(0,0);
+        this.Recurso43.setInteractive();
+        this.Recurso43.on('pointerup', () => { this. showPregunta(12);});
+        this.Recurso44 = this.add.image(4941,1311,'Recurso31').setOrigin(0,0);
+        this.Recurso44.setInteractive();
+        this.Recurso44.on('pointerup', () => { this. showPregunta(13);});
+        this.Recurso45 = this.add.image(4680,1158,'Recurso31').setOrigin(0,0);
+        this.Recurso45.setInteractive();
+        this.Recurso45.on('pointerup', () => { this. showPregunta(14);});
+        this.Recurso46 = this.add.image(3843,1104,'Recurso31').setOrigin(0,0);
+        this.Recurso46.setInteractive();
+        this.Recurso46.on('pointerup', () => { this. showPregunta(15);});
+        
 
 
         //Insertar image en mapa
@@ -198,27 +233,29 @@ class Game extends Phaser.Scene{
 
         this.inicio1 = this.add.image(1326,-37,'inicio1').setOrigin(0,0);
         this.boton1 = this.add.image(1482,634,'inicio2').setOrigin(0,0);
+        this.boton1.setInteractive();
+        this.boton1.on('pointerup', () => { this.animaIn(this.instrucciones)});
 
         this.inicio.add(this.inicio1);
         this.inicio.add(this.boton1);
 
-        this.inicio.visible = false;
 
         ///////////////////////////////////////
         //instrucciones 
 
         this.elemento1 = this.add.image(1273,-37,'instrucciones1').setOrigin(0,0);
         this.boton2 = this.add.image(1480,867,'instrucciones2').setOrigin(0,0);
-        this.lupa1 = this.add.image(682,317,'instrucciones3').setOrigin(0,0);
+        //this.lupa1 = this.add.image(682,317,'instrucciones3').setOrigin(0,0);
+        this.boton2.setInteractive();
+        this.boton2.on('pointerup', () => { this.setup();});
 
         this.instrucciones.add(this.elemento1);
         this.instrucciones.add(this.boton2);
-        this.instrucciones.add(this.lupa1);
+        //this.instrucciones.add(this.lupa1);
 
-        this.instrucciones.visible = false;
 
         ///////////////////////////////////////
-        //instrucciones preguntas
+        //preguntas
         
         this.parte1 = this.add.image(1275,-36,'parte1').setOrigin(0,0);
         this.parte2 = this.add.image(-14,-19,'parte2').setOrigin(0,0);
@@ -236,30 +273,119 @@ class Game extends Phaser.Scene{
         this.preguntas.add(this.escena2);
 
 
-        
-        
+        this.animaIn(this.inicio);
 
         //////////////////////////////////////
         //isntrucciones riesgo
 
       
         ///TEMPORAL PARA SACAR LAS CORDENADAS DE LA IMAGEN
-        this.map.setScale(0.25,0.25);
-        this.temp = this.escena2;
+        //this.map.setScale(0.25,0.25);
+        /*this.temp = this.escena2;
 
         this.temp.setInteractive();
-        this.input.setDraggable(this.temp);
+        this.input.setDraggable(this.temp);*/
 
         this.input.on('drag',function(pointer,gameObject,dragX,dragY){
             gameObject.x = dragX;
             gameObject.y = dragY;
         })
-        this.input.on('dragend',(pointer,gameObject,dragX,dragY) => {
+        /*this.input.on('dragend',(pointer,gameObject,dragX,dragY) => {
             console.log(gameObject);
             console.log("x: " + gameObject.x);
             console.log("y: " + gameObject.y);
+        });*/
+
+        this.input.on('dragend',(pointer,gameObject,dragX,dragY) => {
+            console.log(gameObject.x);
+           if(gameObject.x < -4717){
+            this.tweens.add({
+                targets: this.map,
+                x: -4717,
+                y: gameObject.y,
+                duration: 500,
+                ease: 'Bounce'
+            });
+           }else if(gameObject.x > 140){
+            this.tweens.add({
+                targets: this.map,
+                x: 140,
+                y: gameObject.y,
+                duration: 500,
+                ease: 'Bounce'
+            });
+           }
+           if(gameObject.y < -3070){
+            this.tweens.add({
+                targets: this.map,
+                x: gameObject.x,
+                y: -3074,
+                duration: 500,
+                ease: 'Bounce'
+            });
+            
+           }else if(gameObject.y > 87){
+            this.tweens.add({
+                targets: this.map,
+                x: gameObject.x,
+                y: 87,
+                duration: 500,
+                ease: 'Bounce'
+            });
+            }
+
         });
+
+        this.map.setInteractive(new Phaser.Geom.Rectangle(0, 0, mapwidth, mapHeight), Phaser.Geom.Rectangle.Contains);;
+        this.input.setDraggable(this.map);
+
+        this.map.x = (1920/2)-(mapwidth/2);
+        this.map.y = (1080/2)-(mapHeight/2);
         
+    }
+
+    setup(){
+        this.inicio.visible = false;
+        this.instrucciones.visible = false;
+        this.preguntas.visible = false;
+    }
+    animaIn(group){
+        this.setup();
+        group.visible = true;
+        group.alpha = 0;
+          this.tweens.add({
+              targets: group,
+              alpha: 1,
+              duration:300,
+              onComplete: function(){
+              }
+  
+          })
+    }
+    showPregunta(index){
+        console.log(index);
+        this.animaIn(this.preguntas)
+    }
+    OrdenarPreguntas(){
+        this.p0 = {
+            name: "P0",
+            pregunta: 'Recursox',
+            r1:{
+                imagen:'RecursoY',
+                Respuesta:false
+            },
+            r2:{
+                imagen:'RecursoY1',
+                Respuesta:true
+            },
+            r3:{
+                imagen:'RecursoY2',
+                Respuesta:false
+            },
+            finBien:'RecursoZ1',
+            finmal: 'RecursoZ2'
+
+        }
     }
 }
         

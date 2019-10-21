@@ -29,7 +29,7 @@ class PreLoader extends Phaser.Scene{
         this.load.svg('edificio'+i,'img/edificios/Recurso'+(i)+'.svg',{width: this.widthArrayB[i], height: this.heightarrayB[i]});
         }    
 
-        for(i = 0;i<46;i++){
+        for(i = 0;i<31;i++){
             //img/elementos mapa        
            this.load.svg('Recurso'+(i+1),'img/elementos y personajes/Recurso'+(i+1)+'.svg',{width: this.widthArrayR[i], height: this.heightarrayR[i]});
         }
@@ -38,11 +38,11 @@ class PreLoader extends Phaser.Scene{
            this.load.svg('inicio'+(i+1),'img/fondo/inicio'+(i+1)+'.svg',{width: this.widthArrayF[i], height: this.heightarrayF[i]});
         }
         for(i = 0;i<3;i++){
-            //img/inicio     
+            //img/instrucciones     
            this.load.svg('instrucciones'+(i+1),'img/instrucciones/instrucciones'+(i+1)+'.svg',{width: this.widthArrayT[i], height: this.heightarrayT[i]});
         }
         for(i = 0;i<4;i++){
-            //img/instrucciones preguntas    
+            //img/preguntas    
            this.load.svg('parte'+(i+1),'img/preguntas/parte'+(i+1)+'.svg',{width: this.widthArrayP[i], height: this.heightarrayP[i]});
         }
         for(i = 0;i<16;i++){
