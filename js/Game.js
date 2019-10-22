@@ -291,7 +291,22 @@ class Game extends Phaser.Scene{
         this.arrayPreguntas = [ this.p0 , this.p1, this.p2, this.p3, this.p5, this.p6, this.p7, this.p8, this.p9, this.p10, this.p11, this.p12, this.p13, this.p14, this.p15 ];
 
         ///////////////////////////////Recomendacion
-        //this.Recomendacion
+        //
+        this.header2 = this.add.image(-14,-19,'parte2').setOrigin(0,0);
+        this.fondo = this.add.image(1275,-36,'respuesfinBuenoFondo').setOrigin(0,0);
+        this.textoPregunta2 = this.add.image(1483,172,'parte4').setOrigin(0,0);
+        this.textoRecomendacion = this.add.image(1415,495,'respuesta2').setOrigin(0,0);
+        this.elment = this.add.image(-15,170,'correcto').setOrigin(0,0);
+        this.BotonBack = this.add.image(1510,940,'botonBien').setOrigin(0,0);
+        this.BotonBack.setInteractive();
+        this.BotonBack.on('pointerup', () => { this.Recomendacion.visible = false; });
+        
+        this.Recomendacion.add(this.fondo);
+        this.Recomendacion.add(this.header2);
+        this.Recomendacion.add(this.elment);
+        this.Recomendacion.add(this.textoPregunta2);
+        this.Recomendacion.add(this.textoRecomendacion);
+        this.Recomendacion.add(this.BotonBack);
 
 
 
@@ -371,6 +386,7 @@ class Game extends Phaser.Scene{
         this.inicio.visible = false;
         this.instrucciones.visible = false;
         this.preguntas.visible = false;
+        this.Recomendacion.visible = false;
     }
     animaIn(group){
         this.setup();
@@ -396,10 +412,32 @@ class Game extends Phaser.Scene{
         this.respuestaA.setTexture(this.arrayPreguntas[index].r1.imagen);
         this.respuestaB.setTexture(this.arrayPreguntas[index].r1.imagen);
         this.respuestaC.setTexture(this.arrayPreguntas[index].r1.imagen);
+        this.circulo.setTexture(this.arrayPreguntas[index].escena);
 
     }
     responder(Respuesta){
         console.log(Respuesta);
+        if(Respuesta == true)
+        {
+            this.fondo.setTexture('respuesfinBuenoFondo');
+            this.elment.setTexture('correcto');
+            this.BotonBack.setTexture('botonBien');
+
+        }else{
+            this.fondo.setTexture('respuesfinMaloFondo');
+            this.elment.setTexture('incorrecto');
+            this.BotonBack.setTexture('botonMal');
+
+        }
+
+        this.textoPregunta.setTexture(this.arrayPreguntas[this.currentquestion].pregunta);
+
+        this.textoRecomendacion.setTexture(this.arrayPreguntas[this.currentquestion].Recomendacion);
+
+
+
+        this.preguntas.visible = false,
+        this.Recomendacion.visible = true;
 
     }
     OrdenarPreguntas(){
@@ -419,8 +457,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena1',
-            finBien:'respuesta5',
-            finmal: 'respuesta4'
+            Recomendacion:'respuesta5'
 
         }
         this.p1 = {
@@ -439,8 +476,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena1',
-            finBien:'respuesta2',
-            finmal: 'respuesta1'
+            Recomendacion:'respuesta2'
 
         }
         this.p2 = {
@@ -459,8 +495,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena2',
-            finBien:'respuesta5',
-            finmal: 'respuesta4'
+            Recomendacion:'respuesta5'
         }
         this.p3 = {
             name: "P3",
@@ -478,8 +513,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena3',
-            finBien:'respuesta2',
-            finmal: 'respuesta1'
+            Recomendacion:'respuesta2'
 
         }
         this.p4 = {
@@ -498,8 +532,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena4',
-            finBien:'respuesta5',
-            finmal: 'respuesta4'
+            Recomendacion:'respuesta5'
 
         }
         this.p5 = {
@@ -518,8 +551,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena5',
-            finBien:'respuesta2',
-            finmal: 'respuesta1'
+            Recomendacion:'respuesta2'
 
         }
         this.p6 = {
@@ -538,8 +570,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena6',
-            finBien:'respuesta2',
-            finmal: 'respuesta1'
+            Recomendacion:'respuesta2'
 
         }
         this.p7 = {
@@ -558,8 +589,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena7',
-            finBien:'respuesta2',
-            finmal: 'respuesta1'
+            Recomendacion:'respuesta2'
 
         }
         this.p8 = {
@@ -578,8 +608,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena8',
-            finBien:'respuesta2',
-            finmal: 'respuesta1'
+            Recomendacion:'respuesta2'
 
         }
         this.p9 = {
@@ -598,8 +627,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena9',
-            finBien:'respuesta2',
-            finmal: 'respuesta1'
+            Recomendacion:'respuesta2'
 
         }
         this.p10 = {
@@ -618,8 +646,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena10',
-            finBien:'respuesta2',
-            finmal: 'respuesta1'
+            Recomendacion:'respuesta2'
 
         }
         this.p11 = {
@@ -638,8 +665,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena11',
-            finBien:'respuesta2',
-            finmal: 'respuesta1'
+            Recomendacion:'respuesta2'
 
         }
         this.p12 = {
@@ -658,8 +684,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena12',
-            finBien:'respuesta2',
-            finmal: 'respuesta1'
+            Recomendacion:'respuesta2'
 
         }
         this.p13 = {
@@ -678,8 +703,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena13',
-            finBien:'respuesta2',
-            finmal: 'respuesta1'
+            Recomendacion:'respuesta2'
         }
         this.p14 = {
             name: "P14",
@@ -697,8 +721,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena14',
-            finBien:'respuesta2',
-            finmal: 'respuesta1'
+            Recomendacion:'respuesta2'
         }
         this.p15 = {
             name: "P15",
@@ -716,8 +739,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena15',
-            finBien:'respuesta2',
-            finmal: 'respuesta1'
+            Recomendacion:'respuesta2'
         }
     }
 }
