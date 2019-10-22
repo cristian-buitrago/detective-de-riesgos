@@ -78,11 +78,8 @@ class Game extends Phaser.Scene{
 
         //Insertarimagen en el mapa
         //this.map.add(var imagen);
-        this.map.add(this.edificio7);
         this.map.add(this.edificio6);
         this.map.add(this.edificio3);
-        this.map.add(this.edificio2);
-        this.map.add(this.edificio1);
         this.map.add(this.edificio4);
         this.map.add(this.edificio5);
         this.map.add(this.edificio8);
@@ -93,7 +90,10 @@ class Game extends Phaser.Scene{
         this.map.add(this.edificio13);
         this.map.add(this.edificio14);
         this.map.add(this.edificio15);
-
+        this.map.add(this.edificio7);
+        this.map.add(this.edificio2);
+        this.map.add(this.edificio1);
+        
 
         //Imagenes y objetos
         //var add image()setOrigin;
