@@ -369,7 +369,7 @@ class Game extends Phaser.Scene{
     OrdenarPreguntas(){
         this.p0 = {
             name: "P0",
-            pregunta: 'pregunta1',
+            pregunta: 'pregunta4',
             r1:{
                 imagen:'respuesta4',
                 Respuesta:false
@@ -406,8 +406,8 @@ class Game extends Phaser.Scene{
 
         }
         this.p2 = {
-            name: "P2",
-            pregunta: 'pregunta1',
+            name: "P6",
+            pregunta: 'pregunta2',
             r1:{
                 imagen:'respuesta4',
                 Respuesta:false
@@ -425,7 +425,7 @@ class Game extends Phaser.Scene{
         }
         this.p3 = {
             name: "P3",
-            pregunta: 'pregunta1',
+            pregunta: 'pregunta3',
             r1:{
                 imagen:'respuesta1',
                 Respuesta:false
@@ -444,7 +444,7 @@ class Game extends Phaser.Scene{
         }
         this.p4 = {
             name: "P4",
-            pregunta: 'pregunta1',
+            pregunta: 'pregunta4',
             r1:{
                 imagen:'respuesta4',
                 Respuesta:false
@@ -501,7 +501,7 @@ class Game extends Phaser.Scene{
         }
         this.p7 = {
             name: "P7",
-            pregunta: 'pregunta1',
+            pregunta: 'pregunta2',
             r1:{
                 imagen:'respuesta1',
                 Respuesta:false
@@ -520,7 +520,7 @@ class Game extends Phaser.Scene{
         }
         this.p8 = {
             name: "P8",
-            pregunta: 'pregunta1',
+            pregunta: 'pregunta5',
             r1:{
                 imagen:'respuesta1',
                 Respuesta:false
@@ -577,7 +577,7 @@ class Game extends Phaser.Scene{
         }
         this.p11 = {
             name: "P11",
-            pregunta: 'pregunta1',
+            pregunta: 'pregunta3',
             r1:{
                 imagen:'respuesta1',
                 Respuesta:false
