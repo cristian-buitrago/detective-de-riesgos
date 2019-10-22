@@ -396,6 +396,7 @@ class Game extends Phaser.Scene{
         this.respuestaA.setTexture(this.arrayPreguntas[index].r1.imagen);
         this.respuestaB.setTexture(this.arrayPreguntas[index].r1.imagen);
         this.respuestaC.setTexture(this.arrayPreguntas[index].r1.imagen);
+        this.circulo.setTexture(this.arrayPreguntas[index].escena);
 
     }
     responder(Respuesta){
