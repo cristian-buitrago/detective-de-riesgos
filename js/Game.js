@@ -444,8 +444,8 @@ class Game extends Phaser.Scene{
 
         }
         this.p2 = {
-            name: "P6",
-            pregunta: 'pregunta2',
+            name: "P2",
+            pregunta: 'pregunta6',
             r1:{
                 imagen:'respuesta1',
                 Respuesta:false
@@ -464,7 +464,7 @@ class Game extends Phaser.Scene{
         }
         this.p3 = {
             name: "P3",
-            pregunta: 'pregunta3',
+            pregunta: 'pregunta11',
             r1:{
                 imagen:'respuesta1',
                 Respuesta:false
@@ -504,7 +504,7 @@ class Game extends Phaser.Scene{
         }
         this.p5 = {
             name: "P5",
-            pregunta: 'pregunta1',
+            pregunta: 'pregunta9',
             r1:{
                 imagen:'respuesta1',
                 Respuesta:false
@@ -524,7 +524,7 @@ class Game extends Phaser.Scene{
         }
         this.p6 = {
             name: "P6",
-            pregunta: 'pregunta1',
+            pregunta: 'pregunta10',
             r1:{
                 imagen:'respuesta1',
                 Respuesta:false
@@ -584,7 +584,7 @@ class Game extends Phaser.Scene{
         }
         this.p9 = {
             name: "P9",
-            pregunta: 'pregunta1',
+            pregunta: 'pregunta7',
             r1:{
                 imagen:'respuesta1',
                 Respuesta:false
@@ -604,7 +604,7 @@ class Game extends Phaser.Scene{
         }
         this.p10 = {
             name: "P10",
-            pregunta: 'pregunta1',
+            pregunta: 'pregunta15',
             r1:{
                 imagen:'respuesta1',
                 Respuesta:false
@@ -644,7 +644,7 @@ class Game extends Phaser.Scene{
         }
         this.p12 = {
             name: "P12",
-            pregunta: 'pregunta1',
+            pregunta: 'pregunta12',
             r1:{
                 imagen:'respuesta1',
                 Respuesta:false
@@ -664,7 +664,7 @@ class Game extends Phaser.Scene{
         }
         this.p13 = {
             name: "P13",
-            pregunta: 'pregunta12',
+            pregunta: 'pregunta8',
             r1:{
                 imagen:'respuesta1',
                 Respuesta:false
@@ -683,7 +683,7 @@ class Game extends Phaser.Scene{
         }
         this.p14 = {
             name: "P14",
-            pregunta: 'pregunta12',
+            pregunta: 'pregunta4',
             r1:{
                 imagen:'respuesta1',
                 Respuesta:false
@@ -702,7 +702,7 @@ class Game extends Phaser.Scene{
         }
         this.p15 = {
             name: "P15",
-            pregunta: 'pregunta12',
+            pregunta: 'pregunta13',
             r1:{
                 imagen:'respuesta1',
                 Respuesta:false
