@@ -630,7 +630,42 @@ class Game extends Phaser.Scene{
             },
             finBien:'respuesta2',
             finmal: 'respuesta1'
-
+        }
+        this.p13 = {
+            name: "P14",
+            pregunta: 'pregunta12',
+            r1:{
+                imagen:'respuesta1',
+                Respuesta:false
+            },
+            r2:{
+                imagen:'respuesta2',
+                Respuesta:true
+            },
+            r3:{
+                imagen:'respuesta3',
+                Respuesta:false
+            },
+            finBien:'respuesta2',
+            finmal: 'respuesta1'
+        }
+        this.p13 = {
+            name: "P15",
+            pregunta: 'pregunta12',
+            r1:{
+                imagen:'respuesta1',
+                Respuesta:false
+            },
+            r2:{
+                imagen:'respuesta2',
+                Respuesta:true
+            },
+            r3:{
+                imagen:'respuesta3',
+                Respuesta:false
+            },
+            finBien:'respuesta2',
+            finmal: 'respuesta1'
         }
     }
 }
