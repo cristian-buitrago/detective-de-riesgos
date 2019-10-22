@@ -36,7 +36,9 @@ class Game extends Phaser.Scene{
 
         this.preguntas = this.add.container(0,0);
 
-        this.riesgo = this.add.container(0.0);
+        this.Recomendacion = this.add.container(0.0);
+
+        this.currentquestion;
 
 
         //14 filas
@@ -257,20 +259,41 @@ class Game extends Phaser.Scene{
         ///////////////////////////////////////
         //preguntas
         
-        this.parte1 = this.add.image(1275,-36,'parte1').setOrigin(0,0);
-        this.parte2 = this.add.image(-14,-19,'parte2').setOrigin(0,0);
-        this.parte3 = this.add.image(1500,879,'parte3').setOrigin(0,0);
-        this.parte4 = this.add.image(1483,172,'parte4').setOrigin(0,0);
-        this.escena1 = this.add.image(391,274,'escena15').setOrigin(0.0);
-        this.escena2 = this.add.image(434,317,'escena14').setOrigin(0.0);
+        this.FondoPregunta = this.add.image(1275,-36,'parte1').setOrigin(0,0);
+        this.header = this.add.image(-14,-19,'parte2').setOrigin(0,0);
+        //this.boton = this.add.image(1500,879,'parte3').setOrigin(0,0);
+        this.textoPregunta = this.add.image(1483,172,'parte4').setOrigin(0,0);
+        this.respuestaA = this.add.image(1490,557,'respuesta1').setOrigin(0,0);
+        this.respuestaB = this.add.image(1490,686,'respuesta1').setOrigin(0,0);
+        this.respuestaC = this.add.image(1490,811,'respuesta1').setOrigin(0,0);
+        this.lupa = this.add.image(391,274,'escena15').setOrigin(0.0);
+        this.circulo = this.add.image(434,317,'escena14').setOrigin(0.0);
+
+        this.respuestaA.setInteractive();
+        this.respuestaA.on('pointerup', () => { this.responder(this.arrayPreguntas[this.currentquestion].r1.Respuesta);});
+        this.respuestaB.setInteractive();
+        this.respuestaB.on('pointerup', () => { this.responder(this.arrayPreguntas[this.currentquestion].r2.Respuesta);});
+        this.respuestaC.setInteractive();
+        this.respuestaC.on('pointerup', () => { this.responder(this.arrayPreguntas[this.currentquestion].r3.Respuesta);});
         
 
-        this.preguntas.add(this.parte1);
-        this.preguntas.add(this.parte2);
-        this.preguntas.add(this.parte3);
-        this.preguntas.add(this.parte4);
-        this.preguntas.add(this.escena1);
-        this.preguntas.add(this.escena2);
+        this.preguntas.add(this.FondoPregunta);
+        this.preguntas.add(this.header);
+        //this.preguntas.add(this.parte3);
+        this.preguntas.add(this.textoPregunta);
+        this.preguntas.add(this.respuestaA);
+        this.preguntas.add(this.respuestaB);
+        this.preguntas.add(this.respuestaC);
+        this.preguntas.add(this.lupa);
+        this.preguntas.add(this.circulo);
+
+        this.OrdenarPreguntas();
+        this.arrayPreguntas = [ this.p0 , this.p1, this.p2, this.p3, this.p5, this.p6, this.p7, this.p8, this.p9, this.p10, this.p11, this.p12, this.p13, this.p14, this.p15 ];
+
+        ///////////////////////////////Recomendacion
+        //this.Recomendacion
+
+
 
 
         this.animaIn(this.inicio);
@@ -364,24 +387,38 @@ class Game extends Phaser.Scene{
     }
     showPregunta(index){
         console.log(index);
-        this.animaIn(this.preguntas)
+        this.currentquestion = index;
+        this.animaIn(this.preguntas);
+        //this.parte1 = Fondo Pregunta
+        //this.arrayPreguntas
+        //this.textoPregunta
+        this.textoPregunta.setTexture(this.arrayPreguntas[index].pregunta);
+        this.respuestaA.setTexture(this.arrayPreguntas[index].r1.imagen);
+        this.respuestaB.setTexture(this.arrayPreguntas[index].r1.imagen);
+        this.respuestaC.setTexture(this.arrayPreguntas[index].r1.imagen);
+
+    }
+    responder(Respuesta){
+        console.log(Respuesta);
+
     }
     OrdenarPreguntas(){
         this.p0 = {
             name: "P0",
-            pregunta: 'pregunta4',
+            pregunta: 'pregunta13',
             r1:{
-                imagen:'respuesta4',
+                imagen:'respuesta1',
                 Respuesta:false
             },
             r2:{
-                imagen:'respuesta5',
+                imagen:'respuesta1',
                 Respuesta:true
             },
             r3:{
-                imagen:'respuesta6',
+                imagen:'respuesta1',
                 Respuesta:false
             },
+            escena: 'escena1',
             finBien:'respuesta5',
             finmal: 'respuesta4'
 
@@ -394,13 +431,14 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             r2:{
-                imagen:'respuesta2',
+                imagen:'respuesta1',
                 Respuesta:true
             },
             r3:{
-                imagen:'respuesta3',
+                imagen:'respuesta1',
                 Respuesta:false
             },
+            escena: 'escena1',
             finBien:'respuesta2',
             finmal: 'respuesta1'
 
@@ -409,17 +447,18 @@ class Game extends Phaser.Scene{
             name: "P6",
             pregunta: 'pregunta2',
             r1:{
-                imagen:'respuesta4',
+                imagen:'respuesta1',
                 Respuesta:false
             },
             r2:{
-                imagen:'respuesta5',
+                imagen:'respuesta1',
                 Respuesta:true
             },
             r3:{
-                imagen:'respuesta6',
+                imagen:'respuesta1',
                 Respuesta:false
             },
+            escena: 'escena2',
             finBien:'respuesta5',
             finmal: 'respuesta4'
         }
@@ -431,13 +470,14 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             r2:{
-                imagen:'respuesta2',
+                imagen:'respuesta1',
                 Respuesta:true
             },
             r3:{
-                imagen:'respuesta3',
+                imagen:'respuesta1',
                 Respuesta:false
             },
+            escena: 'escena3',
             finBien:'respuesta2',
             finmal: 'respuesta1'
 
@@ -446,17 +486,18 @@ class Game extends Phaser.Scene{
             name: "P4",
             pregunta: 'pregunta4',
             r1:{
-                imagen:'respuesta4',
+                imagen:'respuesta1',
                 Respuesta:false
             },
             r2:{
-                imagen:'respuesta5',
+                imagen:'respuesta1',
                 Respuesta:true
             },
             r3:{
-                imagen:'respuesta6',
+                imagen:'respuesta1',
                 Respuesta:false
             },
+            escena: 'escena4',
             finBien:'respuesta5',
             finmal: 'respuesta4'
 
@@ -469,13 +510,14 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             r2:{
-                imagen:'respuesta2',
+                imagen:'respuesta1',
                 Respuesta:true
             },
             r3:{
-                imagen:'respuesta3',
+                imagen:'respuesta1',
                 Respuesta:false
             },
+            escena: 'escena5',
             finBien:'respuesta2',
             finmal: 'respuesta1'
 
@@ -488,13 +530,14 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             r2:{
-                imagen:'respuesta2',
+                imagen:'respuesta1',
                 Respuesta:true
             },
             r3:{
-                imagen:'respuesta3',
+                imagen:'respuesta1',
                 Respuesta:false
             },
+            escena: 'escena6',
             finBien:'respuesta2',
             finmal: 'respuesta1'
 
@@ -507,13 +550,14 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             r2:{
-                imagen:'respuesta2',
+                imagen:'respuesta1',
                 Respuesta:true
             },
             r3:{
-                imagen:'respuesta3',
+                imagen:'respuesta1',
                 Respuesta:false
             },
+            escena: 'escena7',
             finBien:'respuesta2',
             finmal: 'respuesta1'
 
@@ -526,13 +570,14 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             r2:{
-                imagen:'respuesta2',
+                imagen:'respuesta1',
                 Respuesta:true
             },
             r3:{
-                imagen:'respuesta3',
+                imagen:'respuesta1',
                 Respuesta:false
             },
+            escena: 'escena8',
             finBien:'respuesta2',
             finmal: 'respuesta1'
 
@@ -545,13 +590,14 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             r2:{
-                imagen:'respuesta2',
+                imagen:'respuesta1',
                 Respuesta:true
             },
             r3:{
-                imagen:'respuesta3',
+                imagen:'respuesta1',
                 Respuesta:false
             },
+            escena: 'escena9',
             finBien:'respuesta2',
             finmal: 'respuesta1'
 
@@ -564,13 +610,14 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             r2:{
-                imagen:'respuesta2',
+                imagen:'respuesta1',
                 Respuesta:true
             },
             r3:{
-                imagen:'respuesta3',
+                imagen:'respuesta1',
                 Respuesta:false
             },
+            escena: 'escena10',
             finBien:'respuesta2',
             finmal: 'respuesta1'
 
@@ -583,13 +630,14 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             r2:{
-                imagen:'respuesta2',
+                imagen:'respuesta1',
                 Respuesta:true
             },
             r3:{
-                imagen:'respuesta3',
+                imagen:'respuesta1',
                 Respuesta:false
             },
+            escena: 'escena11',
             finBien:'respuesta2',
             finmal: 'respuesta1'
 
@@ -602,13 +650,14 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             r2:{
-                imagen:'respuesta2',
+                imagen:'respuesta1',
                 Respuesta:true
             },
             r3:{
-                imagen:'respuesta3',
+                imagen:'respuesta1',
                 Respuesta:false
             },
+            escena: 'escena12',
             finBien:'respuesta2',
             finmal: 'respuesta1'
 
@@ -621,17 +670,18 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             r2:{
-                imagen:'respuesta2',
+                imagen:'respuesta1',
                 Respuesta:true
             },
             r3:{
-                imagen:'respuesta3',
+                imagen:'respuesta1',
                 Respuesta:false
             },
+            escena: 'escena13',
             finBien:'respuesta2',
             finmal: 'respuesta1'
         }
-        this.p13 = {
+        this.p14 = {
             name: "P14",
             pregunta: 'pregunta12',
             r1:{
@@ -639,17 +689,18 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             r2:{
-                imagen:'respuesta2',
+                imagen:'respuesta1',
                 Respuesta:true
             },
             r3:{
-                imagen:'respuesta3',
+                imagen:'respuesta1',
                 Respuesta:false
             },
+            escena: 'escena14',
             finBien:'respuesta2',
             finmal: 'respuesta1'
         }
-        this.p13 = {
+        this.p15 = {
             name: "P15",
             pregunta: 'pregunta12',
             r1:{
@@ -657,13 +708,14 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             r2:{
-                imagen:'respuesta2',
+                imagen:'respuesta1',
                 Respuesta:true
             },
             r3:{
-                imagen:'respuesta3',
+                imagen:'respuesta1',
                 Respuesta:false
             },
+            escena: 'escena15',
             finBien:'respuesta2',
             finmal: 'respuesta1'
         }
