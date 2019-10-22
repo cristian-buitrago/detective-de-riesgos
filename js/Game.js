@@ -689,7 +689,7 @@ class Game extends Phaser.Scene{
         }
         this.p13 = {
             name: "P13",
-            pregunta: 'pregunta8',
+            pregunta: 'pregunta6',
             r1:{
                 imagen:'respuesta1',
                 Respuesta:false
