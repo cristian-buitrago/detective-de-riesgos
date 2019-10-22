@@ -17,6 +17,11 @@ class PreLoader extends Phaser.Scene{
         this.heightarrayT = [1153,129,310];
         this.widthArrayP = [665,1951,344,377];
         this.heightarrayP = [1153,163,130,150];
+        this.widthArrayA = [391,322,466,428,403,377,432,496,495,485,450,450,474,482];
+        this.heightarrayA = [149,67,150,149,144,150,112,141,142,150,144,144,112,181];
+        this.widthArrayC = [391,322,466,428,403,377,432,496,495,485,450,450,474,482];
+        this.heightarrayC = [149,67,150,149,144,150,112,141,142,150,144,144,112,181];
+
 
         for(i = 0;i<361;i++){
         this.load.image('mapa'+i,'imagenes/mapa1_'+(i+1)+'.png');
@@ -47,6 +52,14 @@ class PreLoader extends Phaser.Scene{
         }
         for(i = 0;i<16;i++){
             this.load.image('escena'+i,'img/escenas/escena'+(i+1)+'.png');
+        }
+        for(i = 0;i<14;i++){
+            //img/preguntas    
+           this.load.svg('pregunta'+(i+1),'img/preguntas_inicio/pregunta'+(i+1)+'.svg',{width: this.widthArrayA[i], height: this.heightarrayA[i]});
+        }
+        for(i = 0;i<14;i++){
+            //img/respuestas    
+           this.load.svg('respuesta'+(i+1),'img/respuestas/r'+(i+1)+'.svg',{width: this.widthArrayC[i], height: this.heightarrayC[i]});
         }
         
            

@@ -369,21 +369,267 @@ class Game extends Phaser.Scene{
     OrdenarPreguntas(){
         this.p0 = {
             name: "P0",
-            pregunta: 'Recursox',
+            pregunta: 'pregunta1',
             r1:{
-                imagen:'RecursoY',
+                imagen:'respuesta4',
                 Respuesta:false
             },
             r2:{
-                imagen:'RecursoY1',
+                imagen:'respuesta5',
                 Respuesta:true
             },
             r3:{
-                imagen:'RecursoY2',
+                imagen:'respuesta6',
                 Respuesta:false
             },
-            finBien:'RecursoZ1',
-            finmal: 'RecursoZ2'
+            finBien:'respuesta5',
+            finmal: 'respuesta4'
+
+        }
+        this.p1 = {
+            name: "P1",
+            pregunta: 'pregunta1',
+            r1:{
+                imagen:'respuesta1',
+                Respuesta:false
+            },
+            r2:{
+                imagen:'respuesta2',
+                Respuesta:true
+            },
+            r3:{
+                imagen:'respuesta3',
+                Respuesta:false
+            },
+            finBien:'respuesta2',
+            finmal: 'respuesta1'
+
+        }
+        this.p2 = {
+            name: "P2",
+            pregunta: 'pregunta1',
+            r1:{
+                imagen:'respuesta4',
+                Respuesta:false
+            },
+            r2:{
+                imagen:'respuesta5',
+                Respuesta:true
+            },
+            r3:{
+                imagen:'respuesta6',
+                Respuesta:false
+            },
+            finBien:'respuesta5',
+            finmal: 'respuesta4'
+        }
+        this.p3 = {
+            name: "P3",
+            pregunta: 'pregunta1',
+            r1:{
+                imagen:'respuesta1',
+                Respuesta:false
+            },
+            r2:{
+                imagen:'respuesta2',
+                Respuesta:true
+            },
+            r3:{
+                imagen:'respuesta3',
+                Respuesta:false
+            },
+            finBien:'respuesta2',
+            finmal: 'respuesta1'
+
+        }
+        this.p4 = {
+            name: "P4",
+            pregunta: 'pregunta1',
+            r1:{
+                imagen:'respuesta4',
+                Respuesta:false
+            },
+            r2:{
+                imagen:'respuesta5',
+                Respuesta:true
+            },
+            r3:{
+                imagen:'respuesta6',
+                Respuesta:false
+            },
+            finBien:'respuesta5',
+            finmal: 'respuesta4'
+
+        }
+        this.p5 = {
+            name: "P5",
+            pregunta: 'pregunta1',
+            r1:{
+                imagen:'respuesta1',
+                Respuesta:false
+            },
+            r2:{
+                imagen:'respuesta2',
+                Respuesta:true
+            },
+            r3:{
+                imagen:'respuesta3',
+                Respuesta:false
+            },
+            finBien:'respuesta2',
+            finmal: 'respuesta1'
+
+        }
+        this.p6 = {
+            name: "P6",
+            pregunta: 'pregunta1',
+            r1:{
+                imagen:'respuesta1',
+                Respuesta:false
+            },
+            r2:{
+                imagen:'respuesta2',
+                Respuesta:true
+            },
+            r3:{
+                imagen:'respuesta3',
+                Respuesta:false
+            },
+            finBien:'respuesta2',
+            finmal: 'respuesta1'
+
+        }
+        this.p7 = {
+            name: "P7",
+            pregunta: 'pregunta1',
+            r1:{
+                imagen:'respuesta1',
+                Respuesta:false
+            },
+            r2:{
+                imagen:'respuesta2',
+                Respuesta:true
+            },
+            r3:{
+                imagen:'respuesta3',
+                Respuesta:false
+            },
+            finBien:'respuesta2',
+            finmal: 'respuesta1'
+
+        }
+        this.p8 = {
+            name: "P8",
+            pregunta: 'pregunta1',
+            r1:{
+                imagen:'respuesta1',
+                Respuesta:false
+            },
+            r2:{
+                imagen:'respuesta2',
+                Respuesta:true
+            },
+            r3:{
+                imagen:'respuesta3',
+                Respuesta:false
+            },
+            finBien:'respuesta2',
+            finmal: 'respuesta1'
+
+        }
+        this.p9 = {
+            name: "P9",
+            pregunta: 'pregunta1',
+            r1:{
+                imagen:'respuesta1',
+                Respuesta:false
+            },
+            r2:{
+                imagen:'respuesta2',
+                Respuesta:true
+            },
+            r3:{
+                imagen:'respuesta3',
+                Respuesta:false
+            },
+            finBien:'respuesta2',
+            finmal: 'respuesta1'
+
+        }
+        this.p10 = {
+            name: "P10",
+            pregunta: 'pregunta1',
+            r1:{
+                imagen:'respuesta1',
+                Respuesta:false
+            },
+            r2:{
+                imagen:'respuesta2',
+                Respuesta:true
+            },
+            r3:{
+                imagen:'respuesta3',
+                Respuesta:false
+            },
+            finBien:'respuesta2',
+            finmal: 'respuesta1'
+
+        }
+        this.p11 = {
+            name: "P11",
+            pregunta: 'pregunta1',
+            r1:{
+                imagen:'respuesta1',
+                Respuesta:false
+            },
+            r2:{
+                imagen:'respuesta2',
+                Respuesta:true
+            },
+            r3:{
+                imagen:'respuesta3',
+                Respuesta:false
+            },
+            finBien:'respuesta2',
+            finmal: 'respuesta1'
+
+        }
+        this.p12 = {
+            name: "P12",
+            pregunta: 'pregunta1',
+            r1:{
+                imagen:'respuesta1',
+                Respuesta:false
+            },
+            r2:{
+                imagen:'respuesta2',
+                Respuesta:true
+            },
+            r3:{
+                imagen:'respuesta3',
+                Respuesta:false
+            },
+            finBien:'respuesta2',
+            finmal: 'respuesta1'
+
+        }
+        this.p13 = {
+            name: "P13",
+            pregunta: 'pregunta12',
+            r1:{
+                imagen:'respuesta1',
+                Respuesta:false
+            },
+            r2:{
+                imagen:'respuesta2',
+                Respuesta:true
+            },
+            r3:{
+                imagen:'respuesta3',
+                Respuesta:false
+            },
+            finBien:'respuesta2',
+            finmal: 'respuesta1'
 
         }
     }
