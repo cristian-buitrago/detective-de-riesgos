@@ -5,6 +5,9 @@ var config = {
     height:1080,
     backgroundColor: 0x929737,
     trasparent:false,
+    physics: {
+      default: 'arcade'
+    },
     //render: {
       //  antialias: false
     //},
