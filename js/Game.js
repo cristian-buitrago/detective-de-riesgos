@@ -175,10 +175,6 @@ class Game extends Phaser.Scene{
         this.Recurso45 = this.add.image(4680,1158,'Recurso31').setOrigin(0,0);
         this.Recurso45.setInteractive();
         this.Recurso45.on('pointerup', () => { this. showPregunta(14);});
-        this.Recurso46 = this.add.image(3843,1104,'Recurso31').setOrigin(0,0);
-        this.Recurso46.setInteractive();
-        this.Recurso46.on('pointerup', () => { this. showPregunta(15);});
-        
 
 
         //Insertar image en mapa
@@ -227,7 +223,6 @@ class Game extends Phaser.Scene{
         this.map.add(this.Recurso43);
         this.map.add(this.Recurso44);
         this.map.add(this.Recurso45);
-        this.map.add(this.Recurso46);
 
 
         //////////////////////////////////////
@@ -492,7 +487,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena8',
+            escena: 'escena7',
             Recomendacion:'respuesta5'
 
         }
@@ -511,7 +506,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena15',
+            escena: 'escena14',
             Recomendacion:'respuesta2'
 
         }
@@ -530,7 +525,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena14',
+            escena: 'escena13',
             Recomendacion:'respuesta5'
         }
         this.p3 = {
@@ -548,7 +543,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena13',
+            escena: 'escena12',
             Recomendacion:'respuesta2'
 
         }
@@ -567,7 +562,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena2',
+            escena: 'escena10',
             Recomendacion:'respuesta5'
 
         }
@@ -586,7 +581,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena4',
+            escena: 'escena1',
             Recomendacion:'respuesta2'
 
         }
@@ -624,7 +619,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena4',
+            escena: 'escena3',
             Recomendacion:'respuesta2'
 
         }
@@ -643,7 +638,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena7',
+            escena: 'escena9',
             Recomendacion:'respuesta2'
 
         }
@@ -662,7 +657,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena11',
+            escena: 'escena6',
             Recomendacion:'respuesta2'
 
         }
@@ -681,7 +676,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena1',
+            escena: 'escena10',
             Recomendacion:'respuesta2'
 
         }
@@ -700,7 +695,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena11',
+            escena: 'escena15',
             Recomendacion:'respuesta2'
 
         }
@@ -719,7 +714,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena12',
+            escena: 'escena8',
             Recomendacion:'respuesta2'
 
         }
@@ -756,7 +751,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena6',
+            escena: 'escena5',
             Recomendacion:'respuesta2'
         }
         this.p15 = {
