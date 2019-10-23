@@ -75,7 +75,8 @@ class PreLoader extends Phaser.Scene{
         this.load.svg('botonBien','img/respuesta/seguir1.svg',{width: 307, height: 64});
         this.load.svg('botonMal','img/respuesta/seguir2.svg',{width: 307, height: 64});
         this.load.svg('alerta','img/riego/alerta_seguridad.svg',{width: 1926, height: 194});
-        this.load.svg('alerta','img/riego/btn_solucion.svg',{width: 344, height: 130});
+        this.load.svg('botonSolucion','img/riego/btn_solucion.svg',{width: 344, height: 130});
+        this.load.svg('volver','img/riego/btn_solucion.svg',{width: 320, height: 141});
 
         
            
