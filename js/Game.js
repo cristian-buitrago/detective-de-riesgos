@@ -488,7 +488,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena7',
-            Recomendacion:'respuesta5'
+            Recomendacion:'Recomendacion1'
 
         }
         this.p1 = {
@@ -507,7 +507,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena14',
-            Recomendacion:'respuesta2'
+            Recomendacion:'Recomendacion2'
 
         }
         this.p2 = {
@@ -526,7 +526,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena13',
-            Recomendacion:'respuesta5'
+            Recomendacion:'Recomendacion3'
         }
         this.p3 = {
             name: "P3",
@@ -544,7 +544,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena12',
-            Recomendacion:'respuesta2'
+            Recomendacion:'Recomendacion4'
 
         }
         this.p4 = {
@@ -563,7 +563,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena10',
-            Recomendacion:'respuesta5'
+            Recomendacion:'Recomendacion5'
 
         }
         this.p5 = {
@@ -582,7 +582,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena1',
-            Recomendacion:'respuesta2'
+            Recomendacion:'Recomendacion6'
 
         }
         this.p6 = {
@@ -601,7 +601,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena4',
-            Recomendacion:'respuesta2'
+            Recomendacion:'Recomendacion7'
 
         }
         this.p7 = {
@@ -620,7 +620,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena3',
-            Recomendacion:'respuesta2'
+            Recomendacion:'Recomendacion8'
 
         }
         this.p8 = {
@@ -639,7 +639,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena9',
-            Recomendacion:'respuesta2'
+            Recomendacion:'Recomendacion9'
 
         }
         this.p9 = {
@@ -658,7 +658,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena6',
-            Recomendacion:'respuesta2'
+            Recomendacion:'Recomendacion10'
 
         }
         this.p10 = {
@@ -677,7 +677,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena10',
-            Recomendacion:'respuesta2'
+            Recomendacion:'Recomendacion11'
 
         }
         this.p11 = {
@@ -696,7 +696,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena15',
-            Recomendacion:'respuesta2'
+            Recomendacion:'Recomendacion12'
 
         }
         this.p12 = {
@@ -715,7 +715,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena8',
-            Recomendacion:'respuesta2'
+            Recomendacion:'Recomendacion13'
 
         }
         this.p13 = {
@@ -734,7 +734,7 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena11',
-            Recomendacion:'respuesta2'
+            Recomendacion:'Recomendacion14'
         }
         this.p14 = {
             name: "P14",
@@ -752,26 +752,8 @@ class Game extends Phaser.Scene{
                 Respuesta:false
             },
             escena: 'escena5',
-            Recomendacion:'respuesta2'
-        }
-        this.p15 = {
-            name: "P15",
-            pregunta: 'pregunta13',
-            r1:{
-                imagen:'respuesta1',
-                Respuesta:false
-            },
-            r2:{
-                imagen:'respuesta1',
-                Respuesta:true
-            },
-            r3:{
-                imagen:'respuesta1',
-                Respuesta:false
-            },
-            escena: 'escena3',
-            Recomendacion:'respuesta2'
-        }
+            Recomendacion:'Recomendacion15'
+        } 
     }
 }
         
