@@ -412,6 +412,8 @@ class Game extends Phaser.Scene{
         this.respuestaA.setTexture(this.arrayPreguntas[index].r1.imagen);
         this.respuestaB.setTexture(this.arrayPreguntas[index].r1.imagen);
         this.respuestaC.setTexture(this.arrayPreguntas[index].r1.imagen);
+        console.log("escena");
+        console.log(this.arrayPreguntas[index].escena);
         this.circulo.setTexture(this.arrayPreguntas[index].escena);
 
     }
@@ -550,7 +552,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena5',
+            escena: 'escena4',
             Recomendacion:'respuesta2'
 
         }
@@ -588,7 +590,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena10',
+            escena: 'escena4',
             Recomendacion:'respuesta2'
 
         }
@@ -702,7 +704,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena13',
+            escena: 'escena11',
             Recomendacion:'respuesta2'
         }
         this.p14 = {
