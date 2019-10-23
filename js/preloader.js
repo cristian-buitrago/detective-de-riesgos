@@ -61,6 +61,10 @@ class PreLoader extends Phaser.Scene{
             //img/respuestas    
            this.load.svg('respuesta'+(i+1),'img/respuestas/r'+(i+1)+'.svg',{width: this.widthArrayC[i], height: this.heightarrayC[i]});
         }
+        for(i = 0;i<14;i++){
+            //img/respuestas    
+           this.load.svg('Recomendacion'+(i+1),'img/Recomendaciones/r'+(i+1)+'.svg',{width: this.widthArrayC[i], height: this.heightarrayC[i]});
+        }
 
         this.load.svg('respuesfinBuenoFondo','img/respuesta/recomendacion1.svg',{width: 664, height: 1153});
         this.load.svg('respuesfinMaloFondo','img/respuesta/recomendacion2.svg',{width: 664, height: 1153});
