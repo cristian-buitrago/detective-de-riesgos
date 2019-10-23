@@ -233,10 +233,18 @@ class Game extends Phaser.Scene{
         //////////////////////////////////////
         //inicio
 
+        var backGroundIni =  this.add.graphics();
+        backGroundIni.fillStyle(0x000000, 0.7);
+        backGroundIni.fillRect(0, 0, 1920, 1080);
+
+        backGroundIni.setInteractive(new Phaser.Geom.Rectangle(0, 0, 1920, 1080), Phaser.Geom.Rectangle.Contains);
+
         this.inicio1 = this.add.image(1326,-37,'inicio1').setOrigin(0,0);
         this.boton1 = this.add.image(1482,634,'inicio2').setOrigin(0,0);
         this.boton1.setInteractive();
         this.boton1.on('pointerup', () => { this.animaIn(this.instrucciones)});
+
+        this.inicio.add(backGroundIni);
 
         this.inicio.add(this.inicio1);
         this.inicio.add(this.boton1);
@@ -245,11 +253,19 @@ class Game extends Phaser.Scene{
         ///////////////////////////////////////
         //instrucciones 
 
+        var backGroundIns =  this.add.graphics();
+        backGroundIns.fillStyle(0x000000, 0.7);
+        backGroundIns.fillRect(0, 0, 1920, 1080);
+
+        backGroundIns.setInteractive(new Phaser.Geom.Rectangle(0, 0, 1920, 1080), Phaser.Geom.Rectangle.Contains);
+
         this.elemento1 = this.add.image(1273,-37,'instrucciones1').setOrigin(0,0);
         this.boton2 = this.add.image(1480,867,'instrucciones2').setOrigin(0,0);
         //this.lupa1 = this.add.image(682,317,'instrucciones3').setOrigin(0,0);
         this.boton2.setInteractive();
         this.boton2.on('pointerup', () => { this.setup();});
+
+        this.instrucciones.add(backGroundIns);
 
         this.instrucciones.add(this.elemento1);
         this.instrucciones.add(this.boton2);
@@ -258,6 +274,12 @@ class Game extends Phaser.Scene{
 
         ///////////////////////////////////////
         //preguntas
+
+        var backGroundP =  this.add.graphics();
+        backGroundP.fillStyle(0x000000, 0.7);
+        backGroundP.fillRect(0, 0, 1920, 1080);
+
+        backGroundP.setInteractive(new Phaser.Geom.Rectangle(0, 0, 1920, 1080), Phaser.Geom.Rectangle.Contains);
         
         this.FondoPregunta = this.add.image(1275,-36,'parte1').setOrigin(0,0);
         this.header = this.add.image(-14,-19,'parte2').setOrigin(0,0);
@@ -277,6 +299,7 @@ class Game extends Phaser.Scene{
         this.respuestaC.on('pointerup', () => { this.responder(this.arrayPreguntas[this.currentquestion].r3.Respuesta);});
         
 
+        this.preguntas.add(backGroundP);
         this.preguntas.add(this.FondoPregunta);
         this.preguntas.add(this.header);
         //this.preguntas.add(this.parte3);
@@ -292,6 +315,15 @@ class Game extends Phaser.Scene{
 
         ///////////////////////////////Recomendacion
         //
+
+        var backGroundR =  this.add.graphics();
+        backGroundR.fillStyle(0x000000, 0.7);
+        backGroundR.fillRect(0, 0, 1920, 1080);
+
+        backGroundR.setInteractive(new Phaser.Geom.Rectangle(0, 0, 1920, 1080), Phaser.Geom.Rectangle.Contains);
+
+
+
         this.header2 = this.add.image(-14,-19,'parte2').setOrigin(0,0);
         this.fondo = this.add.image(1275,-36,'respuesfinBuenoFondo').setOrigin(0,0);
         this.textoPregunta2 = this.add.image(1483,172,'parte4').setOrigin(0,0);
@@ -300,6 +332,8 @@ class Game extends Phaser.Scene{
         this.BotonBack = this.add.image(1510,940,'botonBien').setOrigin(0,0);
         this.BotonBack.setInteractive();
         this.BotonBack.on('pointerup', () => { this.Recomendacion.visible = false; });
+
+        this.Recomendacion.add(backGroundR);
         
         this.Recomendacion.add(this.fondo);
         this.Recomendacion.add(this.header2);
