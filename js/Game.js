@@ -36,7 +36,9 @@ class Game extends Phaser.Scene{
 
         this.preguntas = this.add.container(0,0);
 
-        this.Recomendacion = this.add.container(0.0);
+        this.Recomendacion = this.add.container(0,0);
+
+        this.alert = this.add.container(0,0)
 
         this.currentquestion;
 
@@ -131,8 +133,8 @@ class Game extends Phaser.Scene{
         this.Recurso31 = this.add.image(3077,662,'Recurso31').setOrigin(0,0);
         this.Recurso31.alpha = 0.3;
 
-        this.Recurso31.setInteractive();
-        this.Recurso31.on('pointerup', () => { this. showPregunta(0);});
+        //this.Recurso31.setInteractive();
+        //this.Recurso31.on('pointerup', () => { this. showPregunta(0);});
 
         this.Recurso32 = this.add.image(989,1550,'Recurso31').setOrigin(0,0);
         this.Recurso32.alpha = 0.3;
@@ -292,7 +294,6 @@ class Game extends Phaser.Scene{
         backGroundP.setInteractive(new Phaser.Geom.Rectangle(0, 0, 1920, 1080), Phaser.Geom.Rectangle.Contains);
         
         this.FondoPregunta = this.add.image(1275,-36,'parte1').setOrigin(0,0);
-        this.header = this.add.image(-14,-19,'parte2').setOrigin(0,0);
         //this.boton = this.add.image(1500,879,'parte3').setOrigin(0,0);
         this.textoPregunta = this.add.image(1483,172,'parte4').setOrigin(0,0);
         this.respuestaA = this.add.image(1490,557,'respuesta1').setOrigin(0,0);
@@ -300,6 +301,7 @@ class Game extends Phaser.Scene{
         this.respuestaC = this.add.image(1490,811,'respuesta1').setOrigin(0,0);
         this.lupa = this.add.image(391,274,'escena15').setOrigin(0.0);
         this.circulo = this.add.image(434,317,'escena14').setOrigin(0.0);
+        this.btBack = this.add.image(434,317,'volver').setOrigin(0.0);
 
         this.respuestaA.setInteractive();
         this.respuestaA.on('pointerup', () => { this.responder(this.arrayPreguntas[this.currentquestion].r1.Respuesta);});
@@ -311,7 +313,7 @@ class Game extends Phaser.Scene{
 
         this.preguntas.add(backGroundP);
         this.preguntas.add(this.FondoPregunta);
-        this.preguntas.add(this.header);
+        //this.preguntas.add(this.header);
         //this.preguntas.add(this.parte3);
         this.preguntas.add(this.textoPregunta);
         this.preguntas.add(this.respuestaA);
@@ -319,6 +321,7 @@ class Game extends Phaser.Scene{
         this.preguntas.add(this.respuestaC);
         this.preguntas.add(this.lupa);
         this.preguntas.add(this.circulo);
+        this.preguntas.add(this.btBack);
 
         this.OrdenarPreguntas();
         this.arrayPreguntas = [ this.p0 , this.p1, this.p2, this.p3, this.p5, this.p6, this.p7, this.p8, this.p9, this.p10, this.p11, this.p12, this.p13, this.p14, this.p15 ];
@@ -334,7 +337,7 @@ class Game extends Phaser.Scene{
 
 
 
-        this.header2 = this.add.image(-14,-19,'parte2').setOrigin(0,0);
+        //this.header2 = this.add.image(-14,-19,'parte2').setOrigin(0,0);
         this.fondo = this.add.image(1275,-36,'respuesfinBuenoFondo').setOrigin(0,0);
         this.textoPregunta2 = this.add.image(1483,172,'parte4').setOrigin(0,0);
         this.textoRecomendacion = this.add.image(1415,495,'respuesta2').setOrigin(0,0);
@@ -346,11 +349,21 @@ class Game extends Phaser.Scene{
         this.Recomendacion.add(backGroundR);
         
         this.Recomendacion.add(this.fondo);
-        this.Recomendacion.add(this.header2);
+        //this.Recomendacion.add(this.header2);
         this.Recomendacion.add(this.elment);
         this.Recomendacion.add(this.textoPregunta2);
         this.Recomendacion.add(this.textoRecomendacion);
         this.Recomendacion.add(this.BotonBack);
+
+
+        ////////////alerta
+        this.fondoAlerta = this.add.image(0,100,'alerta').setOrigin(0,0);
+        this.btAlerta = this.add.image(1555,140,'botonSolucion').setOrigin(0,0);
+        this.alert.add(this.fondoAlerta);
+        this.alert.add(this.btAlerta);
+
+        this.btAlerta.setInteractive();
+        this.btAlerta.on('pointerup', () => { this. showPregunta(this.currentquestion);});
 
 
 
@@ -371,12 +384,17 @@ class Game extends Phaser.Scene{
 
         //this.physics.add.overlap(this.lupa1, this.alertArray[0], () => { var temp = 0;console.log(temp); });
 
-        for(i = 0;i<this.alertArray.length;i++){
-            this.physics.world.enable(this.alertArray[i]);
-            this.physics.add.overlap(hitArea, this.alertArray[i], function(){var temp = i;console.log(temp); });
-        }
 
-        this.alertArray
+        this.physics.world.enable(this.alertArray[0]);
+        this.physics.add.overlap(hitArea, this.alertArray[0], () =>{this.currentquestion = 0, this.alert.visible = true; });
+
+        this.physics.world.enable(this.alertArray[1]);
+        this.physics.add.overlap(hitArea, this.alertArray[1],() =>{this.currentquestion = 1, this.alert.visible = true; });
+
+        this.physics.world.enable(this.alertArray[2]);
+        this.physics.add.overlap(hitArea, this.alertArray[2], () =>{this.currentquestion = 2, this.alert.visible = true; });
+
+        this.header = this.add.image(-14,-19,'parte2').setOrigin(0,0);
         this.animaIn(this.inicio);
 
         //////////////////////////////////////
@@ -460,6 +478,7 @@ class Game extends Phaser.Scene{
         this.instrucciones.visible = false;
         this.preguntas.visible = false;
         this.Recomendacion.visible = false;
+        this.alert.visible = false;
     }
     animaIn(group){
         this.setup();
@@ -473,6 +492,9 @@ class Game extends Phaser.Scene{
               }
   
           })
+    }
+    ShowAlerta(){
+
     }
     showPregunta(index){
         console.log(index);
