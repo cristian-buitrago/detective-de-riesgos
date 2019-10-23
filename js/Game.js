@@ -394,6 +394,39 @@ class Game extends Phaser.Scene{
         this.physics.world.enable(this.alertArray[2]);
         this.physics.add.overlap(hitArea, this.alertArray[2], () =>{this.currentquestion = 2, this.alert.visible = true; });
 
+        this.physics.world.enable(this.alertArray[4]);
+        this.physics.add.overlap(hitArea, this.alertArray[4], () =>{this.currentquestion = 4, this.alert.visible = true; });
+
+        this.physics.world.enable(this.alertArray[5]);
+        this.physics.add.overlap(hitArea, this.alertArray[5], () =>{this.currentquestion = 5, this.alert.visible = true; });
+
+        this.physics.world.enable(this.alertArray[6]);
+        this.physics.add.overlap(hitArea, this.alertArray[6], () =>{this.currentquestion = 6, this.alert.visible = true; });
+
+        this.physics.world.enable(this.alertArray[7]);
+        this.physics.add.overlap(hitArea, this.alertArray[7], () =>{this.currentquestion = 7, this.alert.visible = true; });
+
+        this.physics.world.enable(this.alertArray[8]);
+        this.physics.add.overlap(hitArea, this.alertArray[8], () =>{this.currentquestion = 8, this.alert.visible = true; });
+
+        this.physics.world.enable(this.alertArray[9]);
+        this.physics.add.overlap(hitArea, this.alertArray[9], () =>{this.currentquestion = 9, this.alert.visible = true; });
+
+        this.physics.world.enable(this.alertArray[10]);
+        this.physics.add.overlap(hitArea, this.alertArray[10], () =>{this.currentquestion = 10, this.alert.visible = true; });
+
+        this.physics.world.enable(this.alertArray[11]);
+        this.physics.add.overlap(hitArea, this.alertArray[11], () =>{this.currentquestion = 11, this.alert.visible = true; });
+
+        this.physics.world.enable(this.alertArray[12]);
+        this.physics.add.overlap(hitArea, this.alertArray[12], () =>{this.currentquestion = 12, this.alert.visible = true; });
+
+        this.physics.world.enable(this.alertArray[13]);
+        this.physics.add.overlap(hitArea, this.alertArray[13], () =>{this.currentquestion = 13, this.alert.visible = true; });
+
+        this.physics.world.enable(this.alertArray[14]);
+        this.physics.add.overlap(hitArea, this.alertArray[14], () =>{this.currentquestion = 14, this.alert.visible = true; });
+
         this.header = this.add.image(-14,-19,'parte2').setOrigin(0,0);
         this.animaIn(this.inicio);
 
