@@ -5,6 +5,73 @@ class PreLoader extends Phaser.Scene{
 
     }
     preload(){
+        //PRELOADER BAR
+        var progressBar = this.add.graphics();
+            var progressBox = this.add.graphics();
+            progressBox.fillStyle(0x222222, 0.8);
+            progressBox.fillRect(800, 515, 320, 50);
+            
+            var width = 1920;
+            var height = 1080;
+            var loadingText = this.make.text({
+                x: width / 2,
+                y: height / 2 - 50,
+                text: 'Loading...',
+                style: {
+                    font: '20px monospace',
+                    fill: '#ffffff'
+                }
+            });
+            loadingText.setOrigin(0.5, 0.5);
+            
+            var percentText = this.make.text({
+                x: width / 2,
+                y: height / 2 - 5,
+                text: '0%',
+                style: {
+                    font: '18px monospace',
+                    fill: '#ffffff'
+                }
+            });
+            percentText.setOrigin(0.5, 0.5);
+            
+            var assetText = this.make.text({
+                x: width / 2,
+                y: height / 2 + 50,
+                text: '',
+                style: {
+                    font: '18px monospace',
+                    fill: '#ffffff'
+                }
+            });
+ 
+            assetText.setOrigin(0.5, 0.5);
+            
+            this.load.on('progress', function (value) {
+                percentText.setText(parseInt(value * 100) + '%');
+                progressBar.clear();
+                progressBar.fillStyle(0xffffff, 1);
+                progressBar.fillRect(810, 525, 300 * value, 30);
+            });
+            
+            this.load.on('fileprogress', function (file) {
+                assetText.setText('Loading asset: ' + file.key);
+            });
+ 
+            this.load.on('complete', function () {
+                progressBar.destroy();
+                progressBox.destroy();
+                loadingText.destroy();
+                percentText.destroy();
+                assetText.destroy();
+            });
+
+
+
+
+
+
+        ///////////////////////////////////////////
         var i = 0;
 
         this.widthArrayB = [718,985,1093,1212,2222,1034,1138,594,288,1520,1903,545,1314,248,316];
@@ -76,7 +143,7 @@ class PreLoader extends Phaser.Scene{
         this.load.svg('botonMal','img/respuesta/seguir2.svg',{width: 307, height: 64});
         this.load.svg('alerta','img/riesgo/alerta_seguridad.svg',{width: 1926, height: 194});
         this.load.svg('botonSolucion','img/riesgo/btn_solucion.svg',{width: 344, height: 130});
-        this.load.svg('volver','img/riesgo/btn_solucion.svg',{width: 320, height: 141});
+        this.load.svg('volver','img/riesgo/volver.svg',{width: 320, height: 141});
 
         
            

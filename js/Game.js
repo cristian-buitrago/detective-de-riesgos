@@ -137,59 +137,59 @@ class Game extends Phaser.Scene{
         //this.Recurso31.on('pointerup', () => { this. showPregunta(0);});
 
         this.Recurso32 = this.add.image(989,1550,'Recurso31').setOrigin(0,0);
-        this.Recurso32.alpha = 0.3;
+        this.Recurso32.alpha = 1;
         this.Recurso32.setInteractive();
         this.Recurso32.on('pointerup', () => { this. showPregunta(1);});
         this.Recurso33 = this.add.image(2419,2115,'Recurso31').setOrigin(0,0);
-        this.Recurso33.alpha = 0.3;
+        this.Recurso33.alpha = 1;
         this.Recurso33.setInteractive();
         this.Recurso33.on('pointerup', () => { this. showPregunta(2);});
         this.Recurso34 = this.add.image(2883,2738,'Recurso31').setOrigin(0,0);
-        this.Recurso34.alpha = 0.3;
+        this.Recurso34.alpha = 1;
         this.Recurso34.setInteractive();
         this.Recurso34.on('pointerup', () => { this. showPregunta(3);});
         this.Recurso35 = this.add.image(3013,1403,'Recurso31').setOrigin(0,0);
-        this.Recurso35.alpha = 0.3;
+        this.Recurso35.alpha = 1;
         this.Recurso35.setInteractive();
         this.Recurso35.on('pointerup', () => { this. showPregunta(4);});
         this.Recurso36 = this.add.image(3320,1303,'Recurso31').setOrigin(0,0);
-        this.Recurso36.alpha = 0.3;
+        this.Recurso36.alpha = 1;
         this.Recurso36.setInteractive();
         this.Recurso36.on('pointerup', () => { this. showPregunta(5);});
         this.Recurso37 = this.add.image(3739,1880,'Recurso31').setOrigin(0,0);
-        this.Recurso37.alpha = 0.3;
+        this.Recurso37.alpha = 1;
         this.Recurso37.setInteractive();
         this.Recurso37.on('pointerup', () => { this. showPregunta(6);});
         this.Recurso38 = this.add.image(3950,2199,'Recurso31').setOrigin(0,0);
-        this.Recurso38.alpha = 0.3;
+        this.Recurso38.alpha = 1;
         this.Recurso38.setInteractive();
         this.Recurso38.on('pointerup', () => { this. showPregunta(7);});
         this.Recurso39 = this.add.image(2979,1977,'Recurso31').setOrigin(0,0);
-        this.Recurso39.alpha = 0.3;
+        this.Recurso39.alpha = 1;
         this.Recurso39.setInteractive();
         this.Recurso39.on('pointerup', () => { this. showPregunta(8);});
         this.Recurso40 = this.add.image(4513,2218,'Recurso31').setOrigin(0,0);
-        this.Recurso40.alpha = 0.3;
+        this.Recurso40.alpha = 1;
         this.Recurso40.setInteractive();
         this.Recurso40.on('pointerup', () => { this. showPregunta(9);});
         this.Recurso41 = this.add.image(6253,1956,'Recurso31').setOrigin(0,0);
-        this.Recurso41.alpha = 0.3;
+        this.Recurso41.alpha = 1;
         this.Recurso41.setInteractive();
         this.Recurso41.on('pointerup', () => { this. showPregunta(10);});
         this.Recurso42 = this.add.image(4793,1742,'Recurso31').setOrigin(0,0);
-        this.Recurso42.alpha = 0.3;
+        this.Recurso42.alpha = 1;
         this.Recurso42.setInteractive();
         this.Recurso42.on('pointerup', () => { this. showPregunta(11);});
         this.Recurso43 = this.add.image(5255,1722,'Recurso31').setOrigin(0,0);
-        this.Recurso43.alpha = 0.3;
+        this.Recurso43.alpha = 1;
         this.Recurso43.setInteractive();
         this.Recurso43.on('pointerup', () => { this. showPregunta(12);});
         this.Recurso44 = this.add.image(4941,1311,'Recurso31').setOrigin(0,0);
-        this.Recurso44.alpha = 0.3;
+        this.Recurso44.alpha = 1;
         this.Recurso44.setInteractive();
         this.Recurso44.on('pointerup', () => { this. showPregunta(13);});
         this.Recurso45 = this.add.image(4680,1158,'Recurso31').setOrigin(0,0);
-        this.Recurso45.alpha = 0.3;
+        this.Recurso45.alpha = 1;
         this.Recurso45.setInteractive();
         this.Recurso45.on('pointerup', () => { this. showPregunta(14);});
         this.alertArray = [this.Recurso31,this.Recurso32,this.Recurso33,this.Recurso34,this.Recurso35,this.Recurso36,this.Recurso37,this.Recurso38,this.Recurso39,this.Recurso40,this.Recurso41,this.Recurso42,this.Recurso43,this.Recurso44,this.Recurso45]
@@ -275,7 +275,7 @@ class Game extends Phaser.Scene{
         this.elemento1 = this.add.image(1273,-37,'instrucciones1').setOrigin(0,0);
         this.boton2 = this.add.image(1480,867,'instrucciones2').setOrigin(0,0);
         this.boton2.setInteractive();
-        this.boton2.on('pointerup', () => { this.setup(); this.VerLupa = true;});
+        this.boton2.on('pointerup', () => { this.setup(); this.VerLupa = true; this.header.visible = true;});
 
         this.instrucciones.add(backGroundIns);
 
@@ -301,7 +301,7 @@ class Game extends Phaser.Scene{
         this.respuestaC = this.add.image(1490,811,'respuesta1').setOrigin(0,0);
         this.lupa = this.add.image(391,274,'escena15').setOrigin(0.0);
         this.circulo = this.add.image(434,317,'escena14').setOrigin(0.0);
-        this.btBack = this.add.image(434,317,'volver').setOrigin(0.0);
+        this.btBack = this.add.image(0,930,'volver').setOrigin(0.0);
 
         this.respuestaA.setInteractive();
         this.respuestaA.on('pointerup', () => { this.responder(this.arrayPreguntas[this.currentquestion].r1.Respuesta);});
@@ -309,6 +309,9 @@ class Game extends Phaser.Scene{
         this.respuestaB.on('pointerup', () => { this.responder(this.arrayPreguntas[this.currentquestion].r2.Respuesta);});
         this.respuestaC.setInteractive();
         this.respuestaC.on('pointerup', () => { this.responder(this.arrayPreguntas[this.currentquestion].r3.Respuesta);});
+
+        this.btBack.setInteractive();
+        this.btBack.on('pointerup', () => {this.preguntas.visible = false;});
         
 
         this.preguntas.add(backGroundP);
@@ -368,9 +371,9 @@ class Game extends Phaser.Scene{
 
 
 
-        var hitArea =  this.add.graphics();
+        /*var hitArea =  this.add.graphics();
         hitArea.fillStyle(0x000000, 0.7);
-        hitArea.fillRect(-60, -60, 60,60);
+        hitArea.fillRect(-60, -60, 60,60);*/
 
         this.cursorLupa = this.add.container(0,0);
 
@@ -378,14 +381,14 @@ class Game extends Phaser.Scene{
         this.lupa1 = this.add.image(0,0,'instrucciones3').setOrigin(0.5,0.5);
         this.lupa1.setScale(0.6,0.6);
         this.cursorLupa.add( this.lupa1);
-        this.cursorLupa.add( hitArea);
+        //this.cursorLupa.add( hitArea);
         this.VerLupa = false;
-        this.physics.world.enable(hitArea);
+        //this.physics.world.enable(hitArea);
 
         //this.physics.add.overlap(this.lupa1, this.alertArray[0], () => { var temp = 0;console.log(temp); });
 
 
-        this.physics.world.enable(this.alertArray[0]);
+        /*this.physics.world.enable(this.alertArray[0]);
         this.physics.add.overlap(hitArea, this.alertArray[0], () =>{this.currentquestion = 0, this.alert.visible = true; });
 
         this.physics.world.enable(this.alertArray[1]);
@@ -425,9 +428,10 @@ class Game extends Phaser.Scene{
         this.physics.add.overlap(hitArea, this.alertArray[13], () =>{this.currentquestion = 13, this.alert.visible = true; });
 
         this.physics.world.enable(this.alertArray[14]);
-        this.physics.add.overlap(hitArea, this.alertArray[14], () =>{this.currentquestion = 14, this.alert.visible = true; });
+        this.physics.add.overlap(hitArea, this.alertArray[14], () =>{this.currentquestion = 14, this.alert.visible = true; });*/
 
         this.header = this.add.image(-14,-19,'parte2').setOrigin(0,0);
+        this.header.visible = false;
         this.animaIn(this.inicio);
 
         //////////////////////////////////////
