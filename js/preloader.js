@@ -96,7 +96,7 @@ class PreLoader extends Phaser.Scene{
         this.load.image('mapa'+i,'imagenes/mapa1_'+(i+1)+'.png');
         }
 
-        for(i = 0;i<15;i++){
+        for(i = 0;i<14;i++){
         //img\Buldings
         console.log('edificio'+i);
         console.log('img/edificios/Recurso'+(i)+'.svg');
@@ -120,7 +120,7 @@ class PreLoader extends Phaser.Scene{
            this.load.svg('parte'+(i+1),'img/preguntas/parte'+(i+1)+'.svg',{width: this.widthArrayP[i], height: this.heightarrayP[i]});
         }
         for(i = 0;i<16;i++){
-            this.load.image('escena'+i,'img/escenas/escena'+(i+1)+'.png');
+            this.load.image('escena'+(i+1),'img/escenas/escena'+(i+1)+'.png');
         }
         for(i = 0;i<14;i++){
             //img/preguntas    
@@ -130,7 +130,7 @@ class PreLoader extends Phaser.Scene{
             //img/respuestas    
            this.load.svg('respuesta'+(i+1),'img/respuestas/r'+(i+1)+'.svg',{width: this.widthArrayC[i], height: this.heightarrayC[i]});
         }
-        for(i = 0;i<14;i++){
+        for(i = 0;i<15;i++){
             //img/respuestas    
            this.load.svg('Recomendacion'+(i+1),'img/Recomendaciones/r'+(i+1)+'.svg',{width: this.widthArrayD[i], height: this.heightarrayD[i]});
         }
@@ -144,6 +144,7 @@ class PreLoader extends Phaser.Scene{
         this.load.svg('alerta','img/riesgo/alerta_seguridad.svg',{width: 1926, height: 194});
         this.load.svg('botonSolucion','img/riesgo/btn_solucion.svg',{width: 344, height: 130});
         this.load.svg('volver','img/riesgo/volver.svg',{width: 320, height: 141});
+        
 
         
            

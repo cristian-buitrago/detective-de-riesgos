@@ -299,7 +299,7 @@ class Game extends Phaser.Scene{
         this.respuestaA = this.add.image(1490,557,'respuesta1').setOrigin(0,0);
         this.respuestaB = this.add.image(1490,686,'respuesta1').setOrigin(0,0);
         this.respuestaC = this.add.image(1490,811,'respuesta1').setOrigin(0,0);
-        this.lupa = this.add.image(391,274,'escena15').setOrigin(0.0);
+        this.lupa = this.add.image(391,274,'escena16').setOrigin(0.0);
         this.circulo = this.add.image(434,317,'escena14').setOrigin(0.0);
         this.btBack = this.add.image(0,930,'volver').setOrigin(0.0);
 
@@ -343,7 +343,7 @@ class Game extends Phaser.Scene{
         //this.header2 = this.add.image(-14,-19,'parte2').setOrigin(0,0);
         this.fondo = this.add.image(1275,-36,'respuesfinBuenoFondo').setOrigin(0,0);
         this.textoPregunta2 = this.add.image(1483,172,'parte4').setOrigin(0,0);
-        this.textoRecomendacion = this.add.image(1415,495,'respuesta2').setOrigin(0,0);
+        this.textoRecomendacion = this.add.image(1650,530,'respuesta2').setOrigin(0.5,0).setScale(0.8);
         this.elment = this.add.image(-15,170,'correcto').setOrigin(0,0);
         this.BotonBack = this.add.image(1510,940,'botonBien').setOrigin(0,0);
         this.BotonBack.setInteractive();
@@ -436,7 +436,6 @@ class Game extends Phaser.Scene{
 
         //////////////////////////////////////
         //isntrucciones riesgo
-
       
         ///TEMPORAL PARA SACAR LAS CORDENADAS DE LA IMAGEN
         //this.map.setScale(0.25,0.25);
@@ -551,7 +550,6 @@ class Game extends Phaser.Scene{
 
     }
     responder(Respuesta){
-        console.log(Respuesta);
         if(Respuesta == true)
         {
             this.fondo.setTexture('respuesfinBuenoFondo');
@@ -591,7 +589,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena7',
+            escena: 'escena8',
             Recomendacion:'Recomendacion1'
 
         }
@@ -610,9 +608,8 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena14',
+            escena: 'escena15',
             Recomendacion:'Recomendacion2'
-
         }
         this.p2 = {
             name: "P2",
@@ -629,7 +626,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena13',
+            escena: 'escena14',
             Recomendacion:'Recomendacion3'
         }
         this.p3 = {
@@ -647,7 +644,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena12',
+            escena: 'escena13',
             Recomendacion:'Recomendacion4'
 
         }
@@ -666,7 +663,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena10',
+            escena: 'escena11',
             Recomendacion:'Recomendacion5'
 
         }
@@ -685,7 +682,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena1',
+            escena: 'escena2',
             Recomendacion:'Recomendacion6'
 
         }
@@ -704,7 +701,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena4',
+            escena: 'escena5',
             Recomendacion:'Recomendacion7'
 
         }
@@ -723,7 +720,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena3',
+            escena: 'escena4',
             Recomendacion:'Recomendacion8'
 
         }
@@ -742,7 +739,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena9',
+            escena: 'escena10',
             Recomendacion:'Recomendacion9'
 
         }
@@ -761,13 +758,13 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena6',
-            Recomendacion:'Recomendacion10'
+            escena: 'escena7',
+            Recomendacion:'Recomendacion9'
 
         }
         this.p10 = {
             name: "P10",
-            pregunta: 'pregunta15',
+            pregunta: 'pregunta12',
             r1:{
                 imagen:'respuesta1',
                 Respuesta:false
@@ -780,8 +777,8 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena10',
-            Recomendacion:'Recomendacion11'
+            escena: 'escena11',
+            Recomendacion:'Recomendacion10'
 
         }
         this.p11 = {
@@ -799,7 +796,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena15',
+            escena: 'escena1',
             Recomendacion:'Recomendacion12'
 
         }
@@ -818,7 +815,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena8',
+            escena: 'escena9',
             Recomendacion:'Recomendacion13'
 
         }
@@ -837,7 +834,7 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena11',
+            escena: 'escena12',
             Recomendacion:'Recomendacion14'
         }
         this.p14 = {
@@ -855,8 +852,8 @@ class Game extends Phaser.Scene{
                 imagen:'respuesta1',
                 Respuesta:false
             },
-            escena: 'escena5',
-            Recomendacion:'Recomendacion15'
+            escena: 'escena6',
+            Recomendacion:'Recomendacion14'
         } 
     }
 }
