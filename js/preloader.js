@@ -76,8 +76,8 @@ class PreLoader extends Phaser.Scene{
 
         this.widthArrayB = [718,985,1093,1212,2222,1034,1138,594,288,1520,1903,545,1314,248,316];
         this.heightarrayB = [1092,704,628,1193,1620,769,865,451,314,1172,1213,557,763,601,858];
-        this.widthArrayR = [180,175,173,203,192,158,158,128,129,196,17,89,260,107,87,17,96,127,378,26,14,19,79,17,210,80,159,78,139,166,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195];
-        this.heightarrayR = [119,115,118,172,162,130,130,158,85,234,45,63,164,135,86,45,70,62,137,51,51,115,119,45,227,80,116,123,131,211,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195,195];        
+        this.widthArrayR = [180,175,173,203,192,158,158,128,129,196,17,89,260,107,87,17,96,127,378,26,14,19,79,17,210,80,159,78,139,166,195,248,275];
+        this.heightarrayR = [119,115,118,172,162,130,130,158,85,234,45,63,164,135,86,45,70,62,137,51,51,115,119,45,227,80,116,123,131,211,195,212,160];        
         this.widthArrayF = [614,352];
         this.heightarrayF = [1153,129];
         this.widthArrayT = [665,352,310];
@@ -103,7 +103,7 @@ class PreLoader extends Phaser.Scene{
         this.load.svg('edificio'+i,'img/edificios/Recurso'+(i)+'.svg',{width: this.widthArrayB[i], height: this.heightarrayB[i]});
         }    
 
-        for(i = 0;i<31;i++){
+        for(i = 0;i<33;i++){
             //img/elementos mapa        
            this.load.svg('Recurso'+(i+1),'img/elementos y personajes/Recurso'+(i+1)+'.svg',{width: this.widthArrayR[i], height: this.heightarrayR[i]});
         }
