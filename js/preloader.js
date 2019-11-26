@@ -84,12 +84,12 @@ class PreLoader extends Phaser.Scene{
         this.heightarrayT = [1153,129,310];
         this.widthArrayP = [665,1951,344,377];
         this.heightarrayP = [1153,163,130,150];
-        this.widthArrayA = [391,322,466,428,403,377,432,496,495,485,450,450,474,482];
-        this.heightarrayA = [149,67,150,149,144,150,112,141,142,150,144,144,112,181];
+        this.widthArrayA =  [391,322,466,428,403,377,432,496,495,485,462,416,450,474,482];
+        this.heightarrayA = [149,67,150,150,143,150,112,141,142,150,169,143,144,112,180];
         this.widthArrayC = [404,488,466,428,403,377,432,496,495,485,450,450,474,482];
         this.heightarrayC = [83,388,150,149,144,150,112,141,142,150,144,144,112,181];
-        this.widthArrayD = [485,451,462,462,463,463,432,458,461,474,408,450,419,374];
-        this.heightarrayD = [264,332,225,225,188,188,370,408,226,180,294,332,66,256];
+        this.widthArrayD = [468,475,462,474,472,478,447,482,478,482,472,486,490,474,482];
+        this.heightarrayD = [263,409,187,295,225,187,301,371,341,455,339,415,447,378,301];
 
 
         for(i = 0;i<361;i++){
@@ -122,14 +122,79 @@ class PreLoader extends Phaser.Scene{
         for(i = 0;i<16;i++){
             this.load.image('escena'+(i+1),'img/escenas/escena'+(i+1)+'.png');
         }
-        for(i = 0;i<14;i++){
+        for(i = 0;i<15;i++){
             //img/preguntas    
-           this.load.svg('pregunta'+(i+1),'img/preguntas_inicio/pregunta'+(i+1)+'.svg',{width: this.widthArrayA[i], height: this.heightarrayA[i]});
+           this.load.svg('pregunta'+(i+1),'img/preguntas_inicio/p'+(i+1)+'.svg',{width: this.widthArrayA[i], height: this.heightarrayA[i]});
         }
-        for(i = 0;i<14;i++){
+        
+        
+        /*for(i = 0;i<14;i++){
             //img/respuestas    
            this.load.svg('respuesta'+(i+1),'img/respuestas/r'+(i+1)+'.svg',{width: this.widthArrayC[i], height: this.heightarrayC[i]});
-        }
+        }*/
+
+        this.load.svg('respuesta1a','img/respuestas/1a.svg',{width: 395, height: 78});
+        this.load.svg('respuesta1b','img/respuestas/1b.svg',{width: 363, height: 50});
+        this.load.svg('respuesta1c','img/respuestas/1c.svg',{width: 392, height: 77});
+
+        this.load.svg('respuesta2a','img/respuestas/2a.svg',{width: 392, height: 78});
+        this.load.svg('respuesta2b','img/respuestas/2b.svg',{width: 382, height: 77});
+        this.load.svg('respuesta2c','img/respuestas/2c.svg',{width: 396, height: 78});
+
+        this.load.svg('respuesta3a','img/respuestas/3a.svg',{width: 396, height: 78});
+        this.load.svg('respuesta3b','img/respuestas/3b.svg',{width: 399, height: 78});
+        this.load.svg('respuesta3c','img/respuestas/3c.svg',{width: 396, height: 78});
+
+        this.load.svg('respuesta4a','img/respuestas/4a.svg',{width: 375, height: 50});
+        this.load.svg('respuesta4b','img/respuestas/4b.svg',{width: 386, height: 78});
+        this.load.svg('respuesta4c','img/respuestas/4c.svg',{width: 365, height: 74});
+
+        this.load.svg('respuesta5a','img/respuestas/5a.svg',{width: 375, height: 78});
+        this.load.svg('respuesta5b','img/respuestas/5b.svg',{width: 399, height: 78});
+        this.load.svg('respuesta5c','img/respuestas/5c.svg',{width: 384, height: 74});
+
+        this.load.svg('respuesta6a','img/respuestas/6a.svg',{width: 395, height: 78});
+        this.load.svg('respuesta6b','img/respuestas/6b.svg',{width: 400, height: 77});
+        this.load.svg('respuesta6c','img/respuestas/6c.svg',{width: 400, height: 78});
+
+        this.load.svg('respuesta7a','img/respuestas/7a.svg',{width: 373, height: 78});
+        this.load.svg('respuesta7b','img/respuestas/7b.svg',{width: 361, height: 50});
+        this.load.svg('respuesta7c','img/respuestas/7c.svg',{width: 389, height: 79});
+
+        this.load.svg('respuesta8a','img/respuestas/8a.svg',{width: 372, height: 78});
+        this.load.svg('respuesta8b','img/respuestas/8b.svg',{width: 366, height: 78});
+        this.load.svg('respuesta8c','img/respuestas/8c.svg',{width: 375, height: 79});
+
+        this.load.svg('respuesta9a','img/respuestas/9a.svg',{width: 401, height: 78});
+        this.load.svg('respuesta9b','img/respuestas/9b.svg',{width: 368, height: 50});
+        this.load.svg('respuesta9c','img/respuestas/9c.svg',{width: 393, height: 77});
+
+        this.load.svg('respuesta10a','img/respuestas/10a.svg',{width: 380, height: 78});
+        this.load.svg('respuesta10b','img/respuestas/10b.svg',{width: 403, height: 78});
+        this.load.svg('respuesta10c','img/respuestas/10c.svg',{width: 380, height: 74});
+
+        this.load.svg('respuesta11a','img/respuestas/11a.svg',{width: 390, height: 78});
+        this.load.svg('respuesta11b','img/respuestas/11b.svg',{width: 401, height: 78});
+        this.load.svg('respuesta11c','img/respuestas/11c.svg',{width: 393, height: 79});
+
+        this.load.svg('respuesta12a','img/respuestas/12a.svg',{width: 398, height: 78});
+        this.load.svg('respuesta12b','img/respuestas/12b.svg',{width: 384, height: 50});
+        this.load.svg('respuesta12c','img/respuestas/12c.svg',{width: 398, height: 77});
+
+        this.load.svg('respuesta13a','img/respuestas/13a.svg',{width: 399, height: 78});
+        this.load.svg('respuesta13b','img/respuestas/13b.svg',{width: 297, height: 50});
+        this.load.svg('respuesta13c','img/respuestas/13c.svg',{width: 386, height: 49});
+
+        this.load.svg('respuesta14a','img/respuestas/14a.svg',{width: 395, height: 74});
+        this.load.svg('respuesta14b','img/respuestas/14b.svg',{width: 401, height: 74});
+        this.load.svg('respuesta14c','img/respuestas/14c.svg',{width: 401, height: 77});
+
+        this.load.svg('respuesta15a','img/respuestas/15a.svg',{width: 397, height: 78});
+        this.load.svg('respuesta15b','img/respuestas/15b.svg',{width: 374, height: 74});
+        this.load.svg('respuesta15c','img/respuestas/15c.svg',{width: 375, height: 73});
+
+
+
         for(i = 0;i<15;i++){
             //img/respuestas    
            this.load.svg('Recomendacion'+(i+1),'img/Recomendaciones/r'+(i+1)+'.svg',{width: this.widthArrayD[i], height: this.heightarrayD[i]});
@@ -144,6 +209,11 @@ class PreLoader extends Phaser.Scene{
         this.load.svg('alerta','img/riesgo/alerta_seguridad.svg',{width: 1926, height: 194});
         this.load.svg('botonSolucion','img/riesgo/btn_solucion.svg',{width: 344, height: 130});
         this.load.svg('volver','img/riesgo/volver.svg',{width: 320, height: 141});
+
+
+        this.load.svg('finBien','img/fondo/aprobado.svg',{width: 711,height: 1151});
+        this.load.svg('finMal','img/fondo/bien.svg',{width: 711,height: 1151});
+        this.load.svg('finBoton','img/fondo/boton.svg',{width: 263,height: 112});
         
 
         
