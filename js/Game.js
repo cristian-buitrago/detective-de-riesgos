@@ -282,6 +282,7 @@ class Game extends Phaser.Scene{
         this.inicio1 = this.add.image(1326,-37,'inicio1').setOrigin(0,0);
         this.boton1 = this.add.image(1482,634,'inicio2').setOrigin(0,0);
         this.boton1.setInteractive();
+        this.boton1.on('pointerup', () => {this.SoundVolver.play()});
         this.boton1.on('pointerup', () => { this.animaIn(this.instrucciones)});
 
         this.inicio.add(backGroundIni);
@@ -302,6 +303,7 @@ class Game extends Phaser.Scene{
         this.elemento1 = this.add.image(1273,-37,'instrucciones1').setOrigin(0,0);
         this.boton2 = this.add.image(1480,867,'instrucciones2').setOrigin(0,0);
         this.boton2.setInteractive();
+        this.boton2.on('pointerup', () => {this.SoundVolver.play()});
         this.boton2.on('pointerup', () => { this.setup(); this.VerLupa = true; this.header.visible = true;});
 
         this.instrucciones.add(backGroundIns);
@@ -368,6 +370,10 @@ class Game extends Phaser.Scene{
         backGroundR.fillRect(0, 0, 1920, 1080);
 
         backGroundR.setInteractive(new Phaser.Geom.Rectangle(0, 0, 1920, 1080), Phaser.Geom.Rectangle.Contains);
+        this.SoundVolver = this.sound.add('SoundVolver');
+        this.Soundmal = this.sound.add('mal');
+        this.Soundbien = this.sound.add('bien');
+
 
 
 
@@ -378,15 +384,18 @@ class Game extends Phaser.Scene{
         this.elment = this.add.image(-15,170,'correcto').setOrigin(0,0);
         this.BotonBack = this.add.image(1510,940,'botonBien').setOrigin(0,0);
         this.BotonBack.setInteractive();
+        this.BotonBack.on('pointerup', () => {this.SoundVolver.play()});
         this.BotonBack.on('pointerup', () => {
             if(this.CantidadPreguntas == 15){
                 console.log("final");
                 this.end.visible = true;
                 if(this.puntaje == 15){
+                    this.Soundbien.play();
                     this.finalBien.visible = true;
                     this.finalMal.visible = false;
                     this.texto.visible = false;
                 }else{
+                    this.Soundmal.play();
                     this.finalBien.visible = false;
                     this.finalMal.visible = true;
                     this.texto.visible = true;
@@ -429,6 +438,7 @@ class Game extends Phaser.Scene{
 
         this.botonTerminar = this.add.image(960,860,'finBoton');
         this.botonTerminar.setInteractive();
+        this.botonTerminar.on('pointerup', () => {this.SoundVolver.play()});
         this.botonTerminar.on('pointerup', () => { location.reload(); });
 
 
@@ -635,12 +645,14 @@ class Game extends Phaser.Scene{
 
         if(Respuesta == true)
         {
+            this.Soundbien.play();
             this.puntaje ++;
             this.fondo.setTexture('respuesfinBuenoFondo');
             this.elment.setTexture('correcto');
             this.BotonBack.setTexture('botonBien');
 
         }else{
+            this.Soundmal.play();
             this.fondo.setTexture('respuesfinMaloFondo');
             this.elment.setTexture('incorrecto');
             this.BotonBack.setTexture('botonMal');

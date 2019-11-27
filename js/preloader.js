@@ -214,6 +214,10 @@ class PreLoader extends Phaser.Scene{
         this.load.svg('finBien','img/fondo/aprobado.svg',{width: 711,height: 1151});
         this.load.svg('finMal','img/fondo/bien.svg',{width: 711,height: 1151});
         this.load.svg('finBoton','img/fondo/boton.svg',{width: 263,height: 112});
+
+        this.load.audio('mal', ['img/sonidos/mal.ogg','img/sonidos/mal.mp3']);
+        this.load.audio('bien', ['img/sonidos/bien.ogg','img/sonidos/bien.mp3']);
+        this.load.audio('SoundVolver', ['img/sonidos/volver.ogg','img/sonidos/volver.mp3']);
         
 
         
