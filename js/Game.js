@@ -144,76 +144,91 @@ class Game extends Phaser.Scene{
         this.Recurso31 = this.add.image(3077,850,'Recurso31').setOrigin(0,0);
         this.Recurso31.alpha = 0.01;
         this.Recurso31.setInteractive(new Phaser.Geom.Rectangle(0, 0, 195, 195), Phaser.Geom.Rectangle.Contains);
+        this.Recurso31.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso31.on('pointerup', () => { this. showPregunta(0);});
 
         this.Recurso32 = this.add.image(1009,1840,'Recurso31').setOrigin(0,0);
         this.Recurso32.alpha = 0.01;
         this.Recurso32.setInteractive();
+        this.Recurso32.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso32.on('pointerup', () => { this. showPregunta(1);});
 
         this.Recurso33 = this.add.image(2469,2265,'Recurso31').setOrigin(0,0);
         this.Recurso33.alpha = 0.01;
         this.Recurso33.setInteractive();
+        this.Recurso33.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso33.on('pointerup', () => { this. showPregunta(2);});
         
         this.Recurso34 = this.add.image(2913,2938,'Recurso31').setOrigin(0,0);
         this.Recurso34.alpha = 0.01;
         this.Recurso34.setInteractive();
+        this.Recurso34.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso34.on('pointerup', () => { this. showPregunta(3);});
         
         this.Recurso35 = this.add.image(3013,1603,'Recurso31').setOrigin(0,0);
         this.Recurso35.alpha = 0.01;
         this.Recurso35.setInteractive();
+        this.Recurso35.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso35.on('pointerup', () => { this. showPregunta(4);});
         
         this.Recurso36 = this.add.image(3320,1503,'Recurso31').setOrigin(0,0);
         this.Recurso36.alpha = 0.01;
         this.Recurso36.setInteractive();
+        this.Recurso36.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso36.on('pointerup', () => { this. showPregunta(5);});
 
         this.Recurso37 = this.add.image(3739,2080,'Recurso31').setOrigin(0,0);
         this.Recurso37.alpha = 0.01;
         this.Recurso37.setInteractive();
+        this.Recurso37.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso37.on('pointerup', () => { this. showPregunta(6);});
         
         this.Recurso38 = this.add.image(3950,2399,'Recurso31').setOrigin(0,0);
         this.Recurso38.alpha = 0.01;
         this.Recurso38.setInteractive();
+        this.Recurso38.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso38.on('pointerup', () => { this. showPregunta(7);});
         
         this.Recurso39 = this.add.image(2979,2177,'Recurso31').setOrigin(0,0);
         this.Recurso39.alpha = 0.01;
         this.Recurso39.setInteractive();
+        this.Recurso39.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso39.on('pointerup', () => { this. showPregunta(8);});
         
         this.Recurso40 = this.add.image(4643,2268,'Recurso31').setOrigin(0,0);
         this.Recurso40.alpha = 0.01;
         this.Recurso40.setInteractive();
+        this.Recurso40.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso40.on('pointerup', () => { this. showPregunta(9);});
         
         this.Recurso41 = this.add.image(6253,2156,'Recurso31').setOrigin(0,0);
         this.Recurso41.alpha = 0.01;
         this.Recurso41.setInteractive();
+        this.Recurso41.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso41.on('pointerup', () => { this. showPregunta(10);});
         
         this.Recurso42 = this.add.image(4793,1942,'Recurso31').setOrigin(0,0);
         this.Recurso42.alpha = 0.01;
         this.Recurso42.setInteractive();
+        this.Recurso42.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso42.on('pointerup', () => { this. showPregunta(11);});
         
         this.Recurso43 = this.add.image(5255,1922,'Recurso31').setOrigin(0,0);
         this.Recurso43.alpha = 0.01;
         this.Recurso43.setInteractive();
+        this.Recurso43.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso43.on('pointerup', () => { this. showPregunta(12);});
         
         this.Recurso44 = this.add.image(4941,1461,'Recurso31').setOrigin(0,0);
         this.Recurso44.alpha = 0.01;
         this.Recurso44.setInteractive();
+        this.Recurso44.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso44.on('pointerup', () => { this. showPregunta(13);});
 
         this.Recurso45 = this.add.image(3830,1228,'Recurso31').setOrigin(0,0);
         this.Recurso45.alpha = 0.01;
         this.Recurso45.setInteractive();
+        this.Recurso45.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso45.on('pointerup', () => { this. showPregunta(14);});
         this.alertArray = [this.Recurso31,this.Recurso32,this.Recurso33,this.Recurso34,this.Recurso35,this.Recurso36,this.Recurso37,this.Recurso38,this.Recurso39,this.Recurso40,this.Recurso41,this.Recurso42,this.Recurso43,this.Recurso44,this.Recurso45]
 
@@ -344,6 +359,7 @@ class Game extends Phaser.Scene{
         this.respuestaC.on('pointerup', () => { this.responder(this.arrayPreguntas[this.currentquestion].r3.Respuesta);});
 
         this.btBack.setInteractive();
+        this.btBack.on('pointerup', () => {this.SoundVolver.play()});
         this.btBack.on('pointerup', () => {this.preguntas.visible = false;this.VerLupa = true;});
         
 
@@ -373,6 +389,7 @@ class Game extends Phaser.Scene{
         this.SoundVolver = this.sound.add('SoundVolver');
         this.Soundmal = this.sound.add('mal');
         this.Soundbien = this.sound.add('bien');
+        this.SoundAlerta = this.sound.add('alarma');
 
 
 

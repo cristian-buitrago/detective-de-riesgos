@@ -218,6 +218,7 @@ class PreLoader extends Phaser.Scene{
         this.load.audio('mal', ['img/sonidos/mal.ogg','img/sonidos/mal.mp3']);
         this.load.audio('bien', ['img/sonidos/bien.ogg','img/sonidos/bien.mp3']);
         this.load.audio('SoundVolver', ['img/sonidos/volver.ogg','img/sonidos/volver.mp3']);
+        this.load.audio('alarma', ['img/sonidos/alerta.ogg','img/sonidos/alerta .mp3']);
         
 
         
