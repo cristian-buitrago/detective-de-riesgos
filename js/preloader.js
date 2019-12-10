@@ -1,5 +1,5 @@
 class PreLoader extends Phaser.Scene{
-    
+
     constructor(){
         super("PreloaderGame");
 
@@ -10,7 +10,7 @@ class PreLoader extends Phaser.Scene{
             var progressBox = this.add.graphics();
             progressBox.fillStyle(0x222222, 0.8);
             progressBox.fillRect(800, 515, 320, 50);
-            
+
             var width = 1920;
             var height = 1080;
             var loadingText = this.make.text({
@@ -23,7 +23,7 @@ class PreLoader extends Phaser.Scene{
                 }
             });
             loadingText.setOrigin(0.5, 0.5);
-            
+
             var percentText = this.make.text({
                 x: width / 2,
                 y: height / 2 - 5,
@@ -34,7 +34,7 @@ class PreLoader extends Phaser.Scene{
                 }
             });
             percentText.setOrigin(0.5, 0.5);
-            
+
             var assetText = this.make.text({
                 x: width / 2,
                 y: height / 2 + 50,
@@ -44,20 +44,20 @@ class PreLoader extends Phaser.Scene{
                     fill: '#ffffff'
                 }
             });
- 
+
             assetText.setOrigin(0.5, 0.5);
-            
+
             this.load.on('progress', function (value) {
                 percentText.setText(parseInt(value * 100) + '%');
                 progressBar.clear();
                 progressBar.fillStyle(0xffffff, 1);
                 progressBar.fillRect(810, 525, 300 * value, 30);
             });
-            
+
             this.load.on('fileprogress', function (file) {
                 assetText.setText('Loading asset: ' + file.key);
             });
- 
+
             this.load.on('complete', function () {
                 progressBar.destroy();
                 progressBox.destroy();
@@ -77,7 +77,7 @@ class PreLoader extends Phaser.Scene{
         this.widthArrayB = [718,985,1093,1212,2222,1034,1138,594,288,1520,1903,545,1314,248,316];
         this.heightarrayB = [1092,704,628,1193,1620,769,865,451,314,1172,1213,557,763,601,858];
         this.widthArrayR = [180,175,173,203,192,158,158,128,129,196,17,89,260,107,87,17,96,127,378,26,14,19,79,17,210,80,159,78,139,166,195,248,275];
-        this.heightarrayR = [119,115,118,172,162,130,130,158,85,234,45,63,164,135,86,45,70,62,137,51,51,115,119,45,227,80,116,123,131,211,195,212,160];        
+        this.heightarrayR = [119,115,118,172,162,130,130,158,85,234,45,63,164,135,86,45,70,62,137,51,51,115,119,45,227,80,116,123,131,211,195,212,160];
         this.widthArrayF = [614,352];
         this.heightarrayF = [1153,129];
         this.widthArrayT = [665,352,310];
@@ -101,35 +101,35 @@ class PreLoader extends Phaser.Scene{
         console.log('edificio'+i);
         console.log('img/edificios/Recurso'+(i)+'.svg');
         this.load.svg('edificio'+i,'img/edificios/Recurso'+(i)+'.svg',{width: this.widthArrayB[i], height: this.heightarrayB[i]});
-        }    
+        }
 
         for(i = 0;i<33;i++){
-            //img/elementos mapa        
+            //img/elementos mapa
            this.load.svg('Recurso'+(i+1),'img/elementos y personajes/Recurso'+(i+1)+'.svg',{width: this.widthArrayR[i], height: this.heightarrayR[i]});
         }
         for(i = 0;i<2;i++){
-            //img/inicio     
+            //img/inicio
            this.load.svg('inicio'+(i+1),'img/fondo/inicio'+(i+1)+'.svg',{width: this.widthArrayF[i], height: this.heightarrayF[i]});
         }
         for(i = 0;i<3;i++){
-            //img/instrucciones     
+            //img/instrucciones
            this.load.svg('instrucciones'+(i+1),'img/instrucciones/instrucciones'+(i+1)+'.svg',{width: this.widthArrayT[i], height: this.heightarrayT[i]});
         }
         for(i = 0;i<4;i++){
-            //img/preguntas    
+            //img/preguntas
            this.load.svg('parte'+(i+1),'img/preguntas/parte'+(i+1)+'.svg',{width: this.widthArrayP[i], height: this.heightarrayP[i]});
         }
         for(i = 0;i<16;i++){
             this.load.image('escena'+(i+1),'img/escenas/escena'+(i+1)+'.png');
         }
         for(i = 0;i<15;i++){
-            //img/preguntas    
+            //img/preguntas
            this.load.svg('pregunta'+(i+1),'img/preguntas_inicio/p'+(i+1)+'.svg',{width: this.widthArrayA[i], height: this.heightarrayA[i]});
         }
-        
-        
+
+
         /*for(i = 0;i<14;i++){
-            //img/respuestas    
+            //img/respuestas
            this.load.svg('respuesta'+(i+1),'img/respuestas/r'+(i+1)+'.svg',{width: this.widthArrayC[i], height: this.heightarrayC[i]});
         }*/
 
@@ -196,7 +196,7 @@ class PreLoader extends Phaser.Scene{
 
 
         for(i = 0;i<15;i++){
-            //img/respuestas    
+            //img/respuestas
            this.load.svg('Recomendacion'+(i+1),'img/Recomendaciones/r'+(i+1)+'.svg',{width: this.widthArrayD[i], height: this.heightarrayD[i]});
         }
 
@@ -219,10 +219,15 @@ class PreLoader extends Phaser.Scene{
         this.load.audio('bien', ['img/sonidos/bien.ogg','img/sonidos/bien.mp3']);
         this.load.audio('SoundVolver', ['img/sonidos/volver.ogg','img/sonidos/volver.mp3']);
         this.load.audio('alarma', ['img/sonidos/alerta.ogg','img/sonidos/alerta .mp3']);
-        
 
-        
-           
+        this.load.svg('puntaje_1','img/puntaje_tiempo/puntaje_1.svg',{width: 294, height: 159});
+        this.load.svg('tiempo','img/puntaje_tiempo/tiempo.svg',{width: 294, height: 159});
+        this.load.svg('tiempo2','img/puntaje_tiempo/tiempo.svg',{width: 322, height: 190});
+        this.load.svg('riesgos','img/puntaje_tiempo/riesgos.svg',{width: 160, height: 387});
+
+
+
+
     }
     create(){
         this.add.text(20,20,"Preload Game...");
