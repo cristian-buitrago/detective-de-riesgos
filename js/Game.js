@@ -5,21 +5,20 @@ class Game extends Phaser.Scene{
 
 
 
-        this.mapArray = [1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,11 ,12 ,13 ,14 ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,
+        this.mapArray = [1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,11 ,12 ,13 ,1 ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,
                          1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,34 ,35 ,36 ,37 ,38 ,39 ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,
                          1  ,1  ,1  ,1  ,1  ,1  ,1  ,56 ,57 ,58 ,59 ,60 ,61 ,62 ,63 ,64 ,65 ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,
-                         1  ,1  ,1  ,1  ,1  ,78 ,79 ,80 ,81 ,82 ,83 ,84 ,85 ,86 ,87 ,88 ,89 ,90 ,1  ,1  ,1  ,1  ,1  ,1  ,
-                         1  ,1  ,1  ,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,1  ,1  ,1  ,1  ,
-                         1  ,1  ,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,1  ,1  ,
+                         1  ,1  ,1  ,1  ,1  ,78 ,79 ,80 ,81 ,82 ,83 ,84 ,85 ,86 ,87 ,88 ,89 ,90 ,91  ,1  ,1  ,1  ,1  ,1  ,
+                         1  ,1  ,1  ,1,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117  ,1  ,1  ,1  ,
+                         1  ,1  ,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143  ,1  ,
                         145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,
                         169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,
                          1  ,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,1  ,
                          1  ,1  ,1  ,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,1  ,1  ,1  ,
-                         1  ,1  ,1  ,1  ,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,1  ,1  ,1  ,1  ,1  ,
+                         1  ,1  ,1  ,1  ,1  ,246,247,248,249,250,251,252,253,254,255,256,257,258,259,1  ,1  ,1  ,1  ,1  ,
                          1  ,1  ,1  ,1  ,1  ,1  ,271,272,273,274,275,276,277,278,279,280,281,282,1  ,1  ,1  ,1  ,1  ,1  ,
                          1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,297,298,299,300,301,302,303,304,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,
-                         1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,309,310,311,312,313,314,315,316,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,
-                         1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,336,337,338,339,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ];
+                         1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1,1,323,324,325,326,1,1,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,];
     }
 
     preload(){
@@ -28,6 +27,13 @@ class Game extends Phaser.Scene{
 
 
     create(){
+        this.desktop;
+        if(this.sys.game.device.os.desktop == true){
+            this.desktop = true;
+
+        }else {
+            this.desktop = false;
+        }
         this.map = this.add.container(0,0);
 
         this.inicio = this.add.container(0,0);
@@ -60,7 +66,7 @@ class Game extends Phaser.Scene{
         //14 filas
         //24 columnas
         var maptilewidth = 309;
-        var mapscolumns = 24;
+        var mapscolumns = 23;
         var mapsLines = 14;
         var columscount = 0;
         var linesCount = 0;
@@ -75,7 +81,7 @@ class Game extends Phaser.Scene{
             columscount ++;
         }
         //Adicionar Imagen
-        //var  = imagen this = escene .add image (posX,posY,keyimageb).setOrigin(0,0);}
+       /* //var  = imagen this = escene .add image (posX,posY,keyimageb).setOrigin(0,0);}
         this.edificio1 = this.add.image(1730,1429,'edificio0').setOrigin(0,0);
         this.edificio2 = this.add.image(2200,1664,'edificio1').setOrigin(0,0);
         this.edificio3 = this.add.image(2257,1157,'edificio2').setOrigin(0,0);
@@ -91,10 +97,10 @@ class Game extends Phaser.Scene{
         this.edificio13 = this.add.image(4747,1868,'edificio12').setOrigin(0,0);
         this.edificio14 = this.add.image(2729,2538,'edificio13').setOrigin(0,0);
         this.edificio15 = this.add.image(3141,2095,'edificio14').setOrigin(0,0);
-
+*/
         //Insertarimagen en el mapa
         //this.map.add(var imagen);
-        this.map.add(this.edificio6);
+        /*this.map.add(this.edificio6);
         this.map.add(this.edificio3);
         this.map.add(this.edificio4);
         this.map.add(this.edificio5);
@@ -109,12 +115,12 @@ class Game extends Phaser.Scene{
         this.map.add(this.edificio7);
         this.map.add(this.edificio2);
         this.map.add(this.edificio1);
-
+*/
 
         //Imagenes y objetos
         //var add image()setOrigin;
 
-        this.Recurso1 = this.add.image(3077,3618,'Recurso1').setOrigin(0,0);
+       /* this.Recurso1 = this.add.image(3077,3618,'Recurso1').setOrigin(0,0);
         this.Recurso2 = this.add.image(5739,2755,'Recurso2').setOrigin(0,0);
         this.Recurso3 = this.add.image(4303,3579,'Recurso3').setOrigin(0,0);
         this.Recurso4 = this.add.image(5174,2886,'Recurso4').setOrigin(0,0);
@@ -145,96 +151,98 @@ class Game extends Phaser.Scene{
         this.Recurso29 = this.add.image(4702,2354,'Recurso29').setOrigin(0,0);
         this.Recurso30 = this.add.image(991,1737,'Recurso30').setOrigin(0,0);
         this.Recurso46 = this.add.image(3600,2950,'Recurso32').setOrigin(0,0);
-        this.Recurso47 = this.add.image(5020,2770,'Recurso33').setOrigin(0,0);
+        this.Recurso47 = this.add.image(5020,2770,'Recurso33').setOrigin(0,0);*/
+
+        var alphaAlert = 0.8
 
 
 
         this.Recurso31 = this.add.image(3077,850,'Recurso31').setOrigin(0,0);
-        this.Recurso31.alpha = 0.01;
+        this.Recurso31.alpha = alphaAlert;
         this.Recurso31.setInteractive(new Phaser.Geom.Rectangle(0, 0, 195, 195), Phaser.Geom.Rectangle.Contains);
         this.Recurso31.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso31.on('pointerup', () => { this. showPregunta(0);});
 
         this.Recurso32 = this.add.image(1009,1840,'Recurso31').setOrigin(0,0);
-        this.Recurso32.alpha = 0.01;
+        this.Recurso32.alpha = alphaAlert;
         this.Recurso32.setInteractive();
         this.Recurso32.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso32.on('pointerup', () => { this. showPregunta(1);});
 
         this.Recurso33 = this.add.image(2469,2265,'Recurso31').setOrigin(0,0);
-        this.Recurso33.alpha = 0.01;
+        this.Recurso33.alpha = alphaAlert;
         this.Recurso33.setInteractive();
         this.Recurso33.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso33.on('pointerup', () => { this. showPregunta(2);});
 
         this.Recurso34 = this.add.image(2913,2938,'Recurso31').setOrigin(0,0);
-        this.Recurso34.alpha = 0.01;
+        this.Recurso34.alpha = alphaAlert;
         this.Recurso34.setInteractive();
         this.Recurso34.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso34.on('pointerup', () => { this. showPregunta(3);});
 
         this.Recurso35 = this.add.image(3013,1603,'Recurso31').setOrigin(0,0);
-        this.Recurso35.alpha = 0.01;
+        this.Recurso35.alpha = alphaAlert;
         this.Recurso35.setInteractive();
         this.Recurso35.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso35.on('pointerup', () => { this. showPregunta(4);});
 
         this.Recurso36 = this.add.image(3320,1503,'Recurso31').setOrigin(0,0);
-        this.Recurso36.alpha = 0.01;
+        this.Recurso36.alpha = alphaAlert;
         this.Recurso36.setInteractive();
         this.Recurso36.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso36.on('pointerup', () => { this. showPregunta(5);});
 
         this.Recurso37 = this.add.image(3739,2080,'Recurso31').setOrigin(0,0);
-        this.Recurso37.alpha = 0.01;
+        this.Recurso37.alpha = alphaAlert;
         this.Recurso37.setInteractive();
         this.Recurso37.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso37.on('pointerup', () => { this. showPregunta(6);});
 
         this.Recurso38 = this.add.image(3950,2399,'Recurso31').setOrigin(0,0);
-        this.Recurso38.alpha = 0.01;
+        this.Recurso38.alpha = alphaAlert;
         this.Recurso38.setInteractive();
         this.Recurso38.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso38.on('pointerup', () => { this. showPregunta(7);});
 
         this.Recurso39 = this.add.image(2979,2177,'Recurso31').setOrigin(0,0);
-        this.Recurso39.alpha = 0.01;
+        this.Recurso39.alpha = alphaAlert;
         this.Recurso39.setInteractive();
         this.Recurso39.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso39.on('pointerup', () => { this. showPregunta(8);});
 
         this.Recurso40 = this.add.image(4643,2268,'Recurso31').setOrigin(0,0);
-        this.Recurso40.alpha = 0.01;
+        this.Recurso40.alpha = alphaAlert;
         this.Recurso40.setInteractive();
         this.Recurso40.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso40.on('pointerup', () => { this. showPregunta(9);});
 
         this.Recurso41 = this.add.image(6253,2156,'Recurso31').setOrigin(0,0);
-        this.Recurso41.alpha = 0.01;
+        this.Recurso41.alpha = alphaAlert;
         this.Recurso41.setInteractive();
         this.Recurso41.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso41.on('pointerup', () => { this. showPregunta(10);});
 
         this.Recurso42 = this.add.image(4793,1942,'Recurso31').setOrigin(0,0);
-        this.Recurso42.alpha = 0.01;
+        this.Recurso42.alpha = alphaAlert;
         this.Recurso42.setInteractive();
         this.Recurso42.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso42.on('pointerup', () => { this. showPregunta(11);});
 
         this.Recurso43 = this.add.image(5255,1922,'Recurso31').setOrigin(0,0);
-        this.Recurso43.alpha = 0.01;
+        this.Recurso43.alpha = alphaAlert;
         this.Recurso43.setInteractive();
         this.Recurso43.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso43.on('pointerup', () => { this. showPregunta(12);});
 
         this.Recurso44 = this.add.image(4941,1461,'Recurso31').setOrigin(0,0);
-        this.Recurso44.alpha = 0.01;
+        this.Recurso44.alpha = alphaAlert;
         this.Recurso44.setInteractive();
         this.Recurso44.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso44.on('pointerup', () => { this. showPregunta(13);});
 
         this.Recurso45 = this.add.image(3830,1228,'Recurso31').setOrigin(0,0);
-        this.Recurso45.alpha = 0.01;
+        this.Recurso45.alpha = alphaAlert;
         this.Recurso45.setInteractive();
         this.Recurso45.on('pointerup', () => {this.SoundAlerta.play()});
         this.Recurso45.on('pointerup', () => { this. showPregunta(14);});
@@ -242,7 +250,7 @@ class Game extends Phaser.Scene{
 
 
         //Insertar image en mapa
-        this.map.add(this.Recurso1);
+       /* this.map.add(this.Recurso1);
         this.map.add(this.Recurso2);
         this.map.add(this.Recurso3);
         this.map.add(this.Recurso4);
@@ -271,7 +279,7 @@ class Game extends Phaser.Scene{
         this.map.add(this.Recurso27);
         this.map.add(this.Recurso28);
         this.map.add(this.Recurso29);
-        this.map.add(this.Recurso30);
+        this.map.add(this.Recurso30);*/
 
         this.map.add(this.Recurso31);
         this.map.add(this.Recurso32);
@@ -288,9 +296,9 @@ class Game extends Phaser.Scene{
         this.map.add(this.Recurso43);
         this.map.add(this.Recurso44);
         this.map.add(this.Recurso45);
-        this.map.add(this.Recurso46);
+       /* this.map.add(this.Recurso46);
         this.map.add(this.Recurso47);
-
+*/
 
 
         //////////////////////////////////////
@@ -415,6 +423,7 @@ class Game extends Phaser.Scene{
         this.preguntas.add(this.btBack);
         this.preguntas.add(this.add.image(1200,220,'tiempo2'));
         this.cronoText = this.add.text(1240, 202, '99', { fontFamily: 'Arial', fontSize: 42, color: '#000000' });
+        this.preguntas.add(this.cronoText);
 
         this.OrdenarPreguntas();
         this.arrayPreguntas = [ this.p0 , this.p1, this.p2, this.p3, this.p5, this.p6, this.p7, this.p8, this.p9, this.p10, this.p11, this.p12, this.p13, this.p14, this.p4 ];
@@ -653,7 +662,14 @@ class Game extends Phaser.Scene{
             this.cursorLupa.x = this.input.x;
             this.cursorLupa.y = this.input.y;
         }
-        this.cursorLupa.visible = this.VerLupa;
+
+        if(this.desktop == true){
+            this.cursorLupa.visible = this.VerLupa;
+
+        }else{
+            this.cursorLupa.visible = false;
+
+        }
 
         this.puntajeText.setText(this.puntaje + '');
         this.tiempoText.setText(this.tiempo + ' seg');

@@ -92,21 +92,23 @@ class PreLoader extends Phaser.Scene{
         this.heightarrayD = [263,409,187,295,225,187,301,371,341,455,339,415,447,378,301];
 
 
-        for(i = 0;i<361;i++){
-        this.load.image('mapa'+i,'imagenes/mapa1_'+(i+1)+'.png');
+        for(i = 0;i<336;i++){
+        this.load.image('mapa'+i,'images/mapa1_'+(i+1)+'.png');
         }
 
-        for(i = 0;i<14;i++){
+        this.load.svg('Recurso31','img/elementos y personajes/Recurso31.svg',{width: 195, height: 195});
+
+        /*for(i = 0;i<14;i++){
         //img\Buldings
         console.log('edificio'+i);
         console.log('img/edificios/Recurso'+(i)+'.svg');
         this.load.svg('edificio'+i,'img/edificios/Recurso'+(i)+'.svg',{width: this.widthArrayB[i], height: this.heightarrayB[i]});
-        }
+        }*/
 
-        for(i = 0;i<33;i++){
+       /* for(i = 0;i<33;i++){
             //img/elementos mapa
            this.load.svg('Recurso'+(i+1),'img/elementos y personajes/Recurso'+(i+1)+'.svg',{width: this.widthArrayR[i], height: this.heightarrayR[i]});
-        }
+        }*/
         for(i = 0;i<2;i++){
             //img/inicio
            this.load.svg('inicio'+(i+1),'img/fondo/inicio'+(i+1)+'.svg',{width: this.widthArrayF[i], height: this.heightarrayF[i]});
@@ -132,6 +134,7 @@ class PreLoader extends Phaser.Scene{
             //img/respuestas
            this.load.svg('respuesta'+(i+1),'img/respuestas/r'+(i+1)+'.svg',{width: this.widthArrayC[i], height: this.heightarrayC[i]});
         }*/
+
 
         this.load.svg('respuesta1a','img/respuestas/1a.svg',{width: 395, height: 78});
         this.load.svg('respuesta1b','img/respuestas/1b.svg',{width: 363, height: 50});

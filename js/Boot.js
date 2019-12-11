@@ -4,6 +4,12 @@ class Boot extends Phaser.Scene{
         super("BootGame");
     }
     preload(){
+    	console.log(this.sys.game.device.os);
+    	if(this.sys.game.device.os.desktop == true){
+    		console.log("aja si");
+
+    	}
+
     }
 
 
