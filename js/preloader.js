@@ -88,8 +88,8 @@ class PreLoader extends Phaser.Scene{
         this.heightarrayA = [149,67,150,150,143,150,112,141,142,150,169,143,144,112,180];
         this.widthArrayC = [404,488,466,428,403,377,432,496,495,485,450,450,474,482];
         this.heightarrayC = [83,388,150,149,144,150,112,141,142,150,144,144,112,181];
-        this.widthArrayD = [468,475,462,474,472,478,447,482,478,482,472,486,490,474,482];
-        this.heightarrayD = [263,409,187,295,225,187,301,371,341,455,339,415,447,378,301];
+        this.widthArrayD = [597,703,619,638,604,675,660,650,590,662,581,653,612,677,679];
+        this.heightarrayD = [187,222,146,178,141,146,185,254,255,337,260,298,146,261,216];
 
 
         for(i = 0;i<336;i++){
@@ -203,8 +203,8 @@ class PreLoader extends Phaser.Scene{
            this.load.svg('Recomendacion'+(i+1),'img/Recomendaciones/r'+(i+1)+'.svg',{width: this.widthArrayD[i], height: this.heightarrayD[i]});
         }
 
-        this.load.svg('respuesfinBuenoFondo','img/respuesta/recomendacion1.svg',{width: 664, height: 1153});
-        this.load.svg('respuesfinMaloFondo','img/respuesta/recomendacion2.svg',{width: 664, height: 1153});
+        this.load.svg('respuesfinBuenoFondo','img/respuesta/recomendacion1.svg',{width: 951, height: 1226});
+        this.load.svg('respuesfinMaloFondo','img/respuesta/recomendacion2.svg',{width: 951, height: 1226});
         this.load.svg('correcto','img/respuesta/correcto.svg',{width: 857, height: 194});
         this.load.svg('incorrecto','img/respuesta/incorrecto.svg',{width: 856, height: 193});
         this.load.svg('botonBien','img/respuesta/seguir1.svg',{width: 307, height: 64});
