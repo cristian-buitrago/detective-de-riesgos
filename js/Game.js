@@ -384,17 +384,17 @@ class Game extends Phaser.Scene{
 
         backGroundP.setInteractive(new Phaser.Geom.Rectangle(0, 0, 1920, 1080), Phaser.Geom.Rectangle.Contains);
 
-        this.FondoPregunta = this.add.image(1275,-36,'parte1').setOrigin(0,0);
+        this.FondoPregunta = this.add.image(1049,-36,'parte1').setOrigin(0,0);
         //this.boton = this.add.image(1500,879,'parte3').setOrigin(0,0);
 
 
 
-        this.textoPregunta = this.add.image(1658,242,'parte4')
-        this.respuestaA = this.add.image(1490,557,'respuesta1').setOrigin(0,0);
-        this.respuestaB = this.add.image(1490,686,'respuesta1').setOrigin(0,0);
-        this.respuestaC = this.add.image(1490,811,'respuesta1').setOrigin(0,0);
-        this.lupa = this.add.image(391,274,'escena16').setOrigin(0.0);
-        this.circulo = this.add.image(434,317,'escena14').setOrigin(0.0);
+        this.textoPregunta = this.add.image(1458,242,'parte4')
+        this.respuestaA = this.add.image(1250,577,'respuesta1').setOrigin(0,0);
+        this.respuestaB = this.add.image(1250,736,'respuesta1').setOrigin(0,0);
+        this.respuestaC = this.add.image(1250,880,'respuesta1').setOrigin(0,0);
+        this.lupa = this.add.image(177,274,'escena16').setOrigin(0.0);
+        this.circulo = this.add.image(220,317,'escena14').setOrigin(0.0);
         this.btBack = this.add.image(0,930,'volver').setOrigin(0.0);
 
 
@@ -421,8 +421,8 @@ class Game extends Phaser.Scene{
         this.preguntas.add(this.lupa);
         this.preguntas.add(this.circulo);
         this.preguntas.add(this.btBack);
-        this.preguntas.add(this.add.image(1200,220,'tiempo2'));
-        this.cronoText = this.add.text(1240, 202, '99', { fontFamily: 'Arial', fontSize: 42, color: '#000000' });
+        this.preguntas.add(this.add.image(1000,220,'tiempo2'));
+        this.cronoText = this.add.text(1050, 202, '99', { fontFamily: 'Arial', fontSize: 42, color: '#000000' });
         this.preguntas.add(this.cronoText);
 
         this.OrdenarPreguntas();
