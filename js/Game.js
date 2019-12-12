@@ -364,7 +364,7 @@ class Game extends Phaser.Scene{
         this.tiempoText = this.add.text(170, 355, '9999', { fontFamily: 'Arial', fontSize: 32, color: '#000000' });
         this.hud.add(this.add.image(10,460,'riesgos').setOrigin(0,0));
         this.hud.add(this.tiempoText);
-        this.riskText = this.add.text(70, 655, '99', { fontFamily: 'Arial', fontSize: 32, color: '#000000' });
+        this.riskText = this.add.text(50, 655, '99', { fontFamily: 'Arial', fontSize: 32, color: '#000000' });
         this.hud.add(this.riskText);
         this.goodText = this.add.text(80, 720, '99', { fontFamily: 'Arial', fontSize: 32, color: '#000000' });
         this.hud.add(this.goodText);
@@ -453,6 +453,14 @@ class Game extends Phaser.Scene{
         this.BotonBack.setInteractive();
         this.BotonBack.on('pointerup', () => {this.SoundVolver.play()});
         this.BotonBack.on('pointerup', () => {
+            ////////////////////////////////////////
+            //AQUI SE ENVIAN LOS DATOS A LA BASE DE DATOS
+            //this.puntaje
+           //this.tiempo
+           //Preguntas  = this.bien + this.errores
+           //this.bien
+           //this.errores
+            //////////////////////////////////////////
             if(this.CantidadPreguntas == 15){
                 console.log("final");
                 this.end.visible = true;
