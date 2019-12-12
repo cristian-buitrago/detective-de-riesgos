@@ -784,11 +784,11 @@ class Game extends Phaser.Scene{
             pregunta: 'pregunta4',
             r2:{
                 imagen:'respuesta4a',
-                Respuesta:false
+                Respuesta:true
             },
             r1:{
                 imagen:'respuesta4b',
-                Respuesta:true
+                Respuesta:false
             },
             r3:{
                 imagen:'respuesta4c',
@@ -804,7 +804,7 @@ class Game extends Phaser.Scene{
             pregunta: 'pregunta1',
             r3:{
                 imagen:'respuesta1a',
-                Respuesta:false
+                Respuesta:true
             },
             r1:{
                 imagen:'respuesta1b',
@@ -812,7 +812,7 @@ class Game extends Phaser.Scene{
             },
             r2:{
                 imagen:'respuesta1c',
-                Respuesta:true
+                Respuesta:false
             },
             escena: 'escena15',
             Recomendacion:'Recomendacion1',
@@ -862,11 +862,11 @@ class Game extends Phaser.Scene{
             pregunta: 'pregunta13',
             r2:{
                 imagen:'respuesta13a',
-                Respuesta:false
+                Respuesta:true
             },
             r1:{
                 imagen:'respuesta13b',
-                Respuesta:true
+                Respuesta:false
             },
             r3:{
                 imagen:'respuesta13c',
@@ -882,7 +882,7 @@ class Game extends Phaser.Scene{
             pregunta: 'pregunta14',
             r2:{
                 imagen:'respuesta14a',
-                Respuesta:false
+                Respuesta:true
             },
             r3:{
                 imagen:'respuesta14b',
@@ -890,7 +890,7 @@ class Game extends Phaser.Scene{
             },
             r1:{
                 imagen:'respuesta14c',
-                Respuesta:true
+                Respuesta:false
             },
             escena: 'escena2',
             Recomendacion:'Recomendacion14',
@@ -942,11 +942,11 @@ class Game extends Phaser.Scene{
             pregunta: 'pregunta2',
             r2:{
                 imagen:'respuesta2a',
-                Respuesta:false
+                Respuesta:true
             },
             r1:{
                 imagen:'respuesta2b',
-                Respuesta:true
+                Respuesta:false
             },
             r3:{
                 imagen:'respuesta2c',
@@ -962,7 +962,7 @@ class Game extends Phaser.Scene{
             pregunta: 'pregunta5',
             r3:{
                 imagen:'respuesta5a',
-                Respuesta:false
+                Respuesta:true
             },
             r2:{
                 imagen:'respuesta5b',
@@ -970,7 +970,7 @@ class Game extends Phaser.Scene{
             },
             r1:{
                 imagen:'respuesta5c',
-                Respuesta:true
+                Respuesta:false
             },
             escena: 'escena7',
             Recomendacion:'Recomendacion5',
@@ -982,7 +982,7 @@ class Game extends Phaser.Scene{
             pregunta: 'pregunta7',
             r2:{
                 imagen:'respuesta7a',
-                Respuesta:false
+                Respuesta:true
             },
             r3:{
                 imagen:'respuesta7b',
@@ -990,7 +990,7 @@ class Game extends Phaser.Scene{
             },
             r1:{
                 imagen:'respuesta7c',
-                Respuesta:true
+                Respuesta:false
             },
             escena: 'escena11',
             Recomendacion:'Recomendacion7',
@@ -1002,15 +1002,15 @@ class Game extends Phaser.Scene{
             pregunta: 'pregunta15',
             r3:{
                 imagen:'respuesta15a',
-                Respuesta:false
+                Respuesta:true
             },
             r1:{
                 imagen:'respuesta15b',
-                Respuesta:true
+                Respuesta:false
             },
             r2:{
                 imagen:'respuesta15c',
-                Respuesta:true
+                Respuesta:false
             },
             escena: 'escena1',
             Recomendacion:'Recomendacion15',
@@ -1022,7 +1022,7 @@ class Game extends Phaser.Scene{
             pregunta: 'pregunta3',
             r3:{
                 imagen:'respuesta3a',
-                Respuesta:false
+                Respuesta:true
             },
             r2:{
                 imagen:'respuesta3b',
@@ -1030,7 +1030,7 @@ class Game extends Phaser.Scene{
             },
             r1:{
                 imagen:'respuesta3c',
-                Respuesta:true
+                Respuesta:false
             },
             escena: 'escena9',
             Recomendacion:'Recomendacion3',
@@ -1042,7 +1042,7 @@ class Game extends Phaser.Scene{
             pregunta: 'pregunta12',
             r2:{
                 imagen:'respuesta12a',
-                Respuesta:false
+                Respuesta:true
             },
             r3:{
                 imagen:'respuesta12b',
@@ -1050,7 +1050,7 @@ class Game extends Phaser.Scene{
             },
             r1:{
                 imagen:'respuesta12c',
-                Respuesta:true
+                Respuesta:false
             },
             escena: 'escena12',
             Recomendacion:'Recomendacion12',
@@ -1061,7 +1061,7 @@ class Game extends Phaser.Scene{
             pregunta: 'pregunta8',
             r3:{
                 imagen:'respuesta8a',
-                Respuesta:false
+                Respuesta:true
             },
             r2:{
                 imagen:'respuesta8b',
@@ -1069,7 +1069,7 @@ class Game extends Phaser.Scene{
             },
             r1:{
                 imagen:'respuesta8c',
-                Respuesta:true
+                Respuesta:false
             },
             escena: 'escena6',
             Recomendacion:'Recomendacion8',
