@@ -364,7 +364,7 @@ class Game extends Phaser.Scene{
         this.tiempoText = this.add.text(170, 355, '9999', { fontFamily: 'Arial', fontSize: 32, color: '#000000' });
         this.hud.add(this.add.image(10,460,'riesgos').setOrigin(0,0));
         this.hud.add(this.tiempoText);
-        this.riskText = this.add.text(70, 655, '99', { fontFamily: 'Arial', fontSize: 32, color: '#000000' });
+        this.riskText = this.add.text(50, 655, '99', { fontFamily: 'Arial', fontSize: 32, color: '#000000' });
         this.hud.add(this.riskText);
         this.goodText = this.add.text(80, 720, '99', { fontFamily: 'Arial', fontSize: 32, color: '#000000' });
         this.hud.add(this.goodText);
@@ -389,7 +389,7 @@ class Game extends Phaser.Scene{
 
 
 
-        this.textoPregunta = this.add.image(1458,242,'parte4')
+        this.textoPregunta = this.add.image(1500,242,'parte4')
         this.respuestaA = this.add.image(1250,577,'respuesta1').setOrigin(0,0);
         this.respuestaB = this.add.image(1250,736,'respuesta1').setOrigin(0,0);
         this.respuestaC = this.add.image(1250,880,'respuesta1').setOrigin(0,0);
