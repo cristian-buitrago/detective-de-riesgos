@@ -399,7 +399,7 @@ class Game extends Phaser.Scene{
 
 
         this.respuestaA.setInteractive(new Phaser.Geom.Rectangle(0, 0, 400, 78), Phaser.Geom.Rectangle.Contains);
-        this.respuestaA.on('pointerup', () => { this.responder(this.arrayPreguntas[this.currentquestion].r1.Respuesta);});
+        this.respuestaA.on('pointerup', () => { this.responder(this.arrays[this.currentquestion].r1.Respuesta);});
         this.respuestaB.setInteractive(new Phaser.Geom.Rectangle(0, 0, 400, 78), Phaser.Geom.Rectangle.Contains);
         this.respuestaB.on('pointerup', () => { this.responder(this.arrayPreguntas[this.currentquestion].r2.Respuesta);});
         this.respuestaC.setInteractive(new Phaser.Geom.Rectangle(0, 0, 400, 78), Phaser.Geom.Rectangle.Contains);
@@ -440,6 +440,8 @@ class Game extends Phaser.Scene{
         this.Soundmal = this.sound.add('mal');
         this.Soundbien = this.sound.add('bien');
         this.SoundAlerta = this.sound.add('alarma');
+        this.SoundFondo = this.sound.add('fondo');
+        this.SoundFondo.play();
 
 
 

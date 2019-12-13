@@ -221,7 +221,8 @@ class PreLoader extends Phaser.Scene{
         this.load.audio('mal', ['img/sonidos/mal.ogg','img/sonidos/mal.mp3']);
         this.load.audio('bien', ['img/sonidos/bien.ogg','img/sonidos/bien.mp3']);
         this.load.audio('SoundVolver', ['img/sonidos/volver.ogg','img/sonidos/volver.mp3']);
-        this.load.audio('alarma', ['img/sonidos/alerta.ogg','img/sonidos/alerta .mp3']);
+        this.load.audio('alarma', ['img/sonidos/alerta.ogg','img/sonidos/alerta.mp3']);
+        this.load.audio('fondo', ['img/sonidos/fondo.ogg','img/sonidos/fondo.mp3']);
 
         this.load.svg('puntaje_1','img/puntaje_tiempo/puntaje_1.svg',{width: 294, height: 159});
         this.load.svg('tiempo','img/puntaje_tiempo/tiempo.svg',{width: 294, height: 159});

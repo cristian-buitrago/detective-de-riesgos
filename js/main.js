@@ -3,7 +3,7 @@ var config = {
     parent:'base',
     width: 1920,
     height:1080,
-    backgroundColor: 0x88b723,
+    backgroundColor: 0x31b900,
     trasparent:false,
     physics: {
       default: 'arcade'
