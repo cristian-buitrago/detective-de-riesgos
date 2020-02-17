@@ -109,10 +109,17 @@ class PreLoader extends Phaser.Scene{
             //img/elementos mapa
            this.load.svg('Recurso'+(i+1),'img/elementos y personajes/Recurso'+(i+1)+'.svg',{width: this.widthArrayR[i], height: this.heightarrayR[i]});
         }*/
-        for(i = 0;i<2;i++){
+        /*for(i = 0;i<2;i++){
             //img/inicio
            this.load.svg('inicio'+(i+1),'img/fondo/inicio'+(i+1)+'.svg',{width: this.widthArrayF[i], height: this.heightarrayF[i]});
-        }
+        }*/
+
+        this.load.image('inicio1','img/fondo/inicio1.png');
+        this.load.svg('inicio2','img/fondo/inicio2.svg',{width: this.widthArrayF[1], height: this.heightarrayF[1]});
+
+
+
+
         for(i = 0;i<3;i++){
             //img/instrucciones
            this.load.svg('instrucciones'+(i+1),'img/instrucciones/instrucciones'+(i+1)+'.svg',{width: this.widthArrayT[i], height: this.heightarrayT[i]});
@@ -214,8 +221,12 @@ class PreLoader extends Phaser.Scene{
         this.load.svg('volver','img/riesgo/volver.svg',{width: 320, height: 141});
 
 
-        this.load.svg('finBien','img/fondo/aprobado.svg',{width: 711,height: 1151});
-        this.load.svg('finMal','img/fondo/bien.svg',{width: 711,height: 1151});
+        //this.load.svg('finBien','img/fondo/aprobado.svg',{width: 711,height: 1151});
+        //this.load.svg('finMal','img/fondo/bien.svg',{width: 711,height: 1151});
+        this.load.image('finBien','img/fondo/aprobado.png');
+        this.load.image('finMal','img/fondo/bien.png');
+
+
         this.load.svg('finBoton','img/fondo/boton.svg',{width: 263,height: 112});
 
         this.load.audio('mal', ['img/sonidos/mal.ogg','img/sonidos/mal.mp3']);

@@ -389,7 +389,7 @@ class Game extends Phaser.Scene{
 
 
 
-        this.textoPregunta = this.add.image(1500,242,'parte4')
+        this.textoPregunta = this.add.image(1500,242,'parte4');
         this.respuestaA = this.add.image(1250,577,'respuesta1').setOrigin(0,0);
         this.respuestaB = this.add.image(1250,736,'respuesta1').setOrigin(0,0);
         this.respuestaC = this.add.image(1250,880,'respuesta1').setOrigin(0,0);
@@ -397,13 +397,26 @@ class Game extends Phaser.Scene{
         this.circulo = this.add.image(220,317,'escena14').setOrigin(0.0);
         this.btBack = this.add.image(0,930,'volver').setOrigin(0.0);
 
+        this.btA = this.add.graphics();
+        this.btA.fillStyle(0xffffff, 0.1);
+        this.btA.fillRect(1150, 577, 700, 80);
 
-        this.respuestaA.setInteractive(new Phaser.Geom.Rectangle(0, 0, 400, 78), Phaser.Geom.Rectangle.Contains);
-        this.respuestaA.on('pointerup', () => { this.responder(this.arrays[this.currentquestion].r1.Respuesta);});
-        this.respuestaB.setInteractive(new Phaser.Geom.Rectangle(0, 0, 400, 78), Phaser.Geom.Rectangle.Contains);
-        this.respuestaB.on('pointerup', () => { this.responder(this.arrayPreguntas[this.currentquestion].r2.Respuesta);});
-        this.respuestaC.setInteractive(new Phaser.Geom.Rectangle(0, 0, 400, 78), Phaser.Geom.Rectangle.Contains);
-        this.respuestaC.on('pointerup', () => { this.responder(this.arrayPreguntas[this.currentquestion].r3.Respuesta);});
+        this.btB = this.add.graphics();
+        this.btB.fillStyle(0xffffff, 0.1);
+        this.btB.fillRect(1150, 736, 700, 80);
+
+        this.btC = this.add.graphics();
+        this.btC.fillStyle(0xffffff, 0.1);
+        this.btC.fillRect(1150, 880, 700, 80);
+
+
+
+        this.btA.setInteractive(new Phaser.Geom.Rectangle(1150, 577, 700, 80), Phaser.Geom.Rectangle.Contains);
+        this.btA.on('pointerup', () => { this.responder(this.arrayPreguntas[this.currentquestion].r1.Respuesta);});
+        this.btB.setInteractive(new Phaser.Geom.Rectangle(1150, 736, 800, 80), Phaser.Geom.Rectangle.Contains);
+        this.btB.on('pointerup', () => { this.responder(this.arrayPreguntas[this.currentquestion].r2.Respuesta);});
+        this.btC.setInteractive(new Phaser.Geom.Rectangle(1150, 880, 400, 78), Phaser.Geom.Rectangle.Contains);
+        this.btC.on('pointerup', () => { this.responder(this.arrayPreguntas[this.currentquestion].r3.Respuesta);});
 
         this.btBack.setInteractive();
         this.btBack.on('pointerup', () => {this.SoundVolver.play()});
@@ -418,6 +431,9 @@ class Game extends Phaser.Scene{
         this.preguntas.add(this.respuestaA);
         this.preguntas.add(this.respuestaB);
         this.preguntas.add(this.respuestaC);
+        this.preguntas.add(this.btA);
+        this.preguntas.add(this.btB);
+        this.preguntas.add(this.btC);
         this.preguntas.add(this.lupa);
         this.preguntas.add(this.circulo);
         this.preguntas.add(this.btBack);
@@ -463,13 +479,18 @@ class Game extends Phaser.Scene{
                     this.Soundbien.play();
                     this.finalBien.visible = true;
                     this.finalMal.visible = false;
-                    this.texto.visible = false;
+                    this.texto.visible = true;
+                    this.texto.x = 1060;
+                    this.texto.y = 717;
+                    this.texto.setText('15/15');
                 }else{
                     this.Soundmal.play();
                     this.finalBien.visible = false;
                     this.finalMal.visible = true;
                     this.texto.visible = true;
-                    this.texto.setText(this.bien + '/10');
+                    this.texto.x = 1060;
+                    this.texto.y = 597;
+                    this.texto.setText(this.bien + '/15');
                 }
 
             } else{
@@ -504,9 +525,9 @@ class Game extends Phaser.Scene{
         backGroundF.fillRect(0, 0, 1920, 1080);
 
         this.finalBien = this.add.image(960,760,'finBien');
-        this.finalMal = this.add.image(960,760,'finMal')
+        this.finalMal = this.add.image(960,760,'finBien')
 
-        this.botonTerminar = this.add.image(960,860,'finBoton');
+        this.botonTerminar = this.add.image(1110,860,'finBoton');
         this.botonTerminar.setInteractive();
         this.botonTerminar.on('pointerup', () => {this.SoundVolver.play()});
         this.botonTerminar.on('pointerup', () => { location.reload(); });
@@ -514,7 +535,7 @@ class Game extends Phaser.Scene{
 
 
 
-        this.texto = this.add.text(1060, 597, '10/10', { fontFamily: 'Arial', fontSize: 40, color: '#000000' }).setOrigin(0,0);
+        this.texto = this.add.text(1060, 717, '10/10', { fontFamily: 'Arial', fontSize: 40, color: '#000000' }).setOrigin(0,0);
 
 
 
@@ -825,7 +846,7 @@ class Game extends Phaser.Scene{
             pregunta: 'pregunta6',
             r1:{
                 imagen:'respuesta6a',
-                Respuesta:true
+                Respuesta:false
             },
             r3:{
                 imagen:'respuesta6b',
@@ -833,7 +854,7 @@ class Game extends Phaser.Scene{
             },
             r2:{
                 imagen:'respuesta6c',
-                Respuesta:false
+                Respuesta:true
             },
             escena: 'escena14',
             Recomendacion:'Recomendacion6',
@@ -924,11 +945,11 @@ class Game extends Phaser.Scene{
             pregunta: 'pregunta10',
             r1:{
                 imagen:'respuesta10a',
-                Respuesta:true
+                Respuesta:false
             },
             r2:{
                 imagen:'respuesta10b',
-                Respuesta:false
+                Respuesta:true
             },
             r3:{
                 imagen:'respuesta10c',
@@ -964,7 +985,7 @@ class Game extends Phaser.Scene{
             pregunta: 'pregunta5',
             r3:{
                 imagen:'respuesta5a',
-                Respuesta:true
+                Respuesta:false
             },
             r2:{
                 imagen:'respuesta5b',
@@ -972,7 +993,7 @@ class Game extends Phaser.Scene{
             },
             r1:{
                 imagen:'respuesta5c',
-                Respuesta:false
+                Respuesta:true
             },
             escena: 'escena7',
             Recomendacion:'Recomendacion5',
